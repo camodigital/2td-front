@@ -8,6 +8,9 @@ const font = {
     weight4: 700,
     weight5: 800
   },
+  lineHeight: {
+    default: '150%'
+  },
   sizes: {
     xsmall: '1.2rem',
     small: '1.4rem',
