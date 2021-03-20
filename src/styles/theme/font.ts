@@ -11,6 +11,9 @@ const font = {
   lineHeight: {
     default: '150%'
   },
+  letterSpace: {
+    small: '0.1rem'
+  },
   sizes: {
     xsmall: '1.2rem',
     small: '1.4rem',
