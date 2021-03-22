@@ -7,7 +7,11 @@ const options = {
     bg: '#FAFAFA',
     bgLight: '#FFFFFF',
     sucess: '#B2DF00',
-    error: '#FF6464'
+    error: '#FF6464',
+    gradients: {
+      primary: `linear-gradient(90deg, #A1C616 0%, #B2DF00 50%);`,
+      primaryHover: `linear-gradient(90deg, #A1C616 20%, #B2DF00 80%);`
+    }
   },
   dark: {
     primary: '#A1C616',
@@ -17,7 +21,10 @@ const options = {
     bg: '#FAFAFA',
     bgLight: '#FFFFFF',
     sucess: '#B2DF00',
-    error: '#FF6464'
+    error: '#FF6464',
+    gradients: {
+      primary: `linear-gradient(90deg, #A1C616 0%, #B2DF00 50%);`
+    }
   }
 }
 

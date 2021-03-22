@@ -55,6 +55,8 @@ const GlobalStyles = createGlobalStyle`
 
     box-sizing: border-box;
 
+    outline: none;
+
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
