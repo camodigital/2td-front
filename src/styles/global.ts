@@ -1,6 +1,8 @@
 import { createGlobalStyle, css } from 'styled-components'
 import { normalize } from 'styled-normalize'
 
+import media from 'styled-media-query'
+
 const GlobalStyles = createGlobalStyle`
   ${normalize}
 
@@ -72,10 +74,15 @@ const GlobalStyles = createGlobalStyle`
 
     body {
       font-family: ${theme.font.family};
-      font-size: ${theme.sizes.medium};
+      font-size: ${theme.sizes.xsmall};
+      line-height: 150%;
       color: ${theme.colors.text};
 
       background-color: ${theme.colors.bg};
+
+      ${media.greaterThan('medium')`
+        font-size: ${theme.sizes.medium};
+      `}
     }
   `}
 `
