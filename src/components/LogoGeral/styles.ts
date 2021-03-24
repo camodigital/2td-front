@@ -1,0 +1,18 @@
+import styled, { css } from 'styled-components'
+import { LogoProps } from '.'
+
+export const Wrapper = styled.div<LogoProps>`
+  ${({ theme, color1, color2 }) => css`
+    svg {
+      width: 100%;
+      path {
+        :nth-child(1) {
+          fill: ${theme.colors[color1!]};
+        }
+        :nth-child(2) {
+          fill: ${theme.colors[color2!]};
+        }
+      }
+    }
+  `}
+`
