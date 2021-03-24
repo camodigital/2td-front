@@ -34,7 +34,7 @@ export const Wrapper = styled.button<WrapperProps>`
 
     border-radius: ${theme.border.radiusButton};
 
-    font-size: ${theme.font.sizes.xsmall};
+    font-size: ${theme.sizes.xsmall};
     font-weight: ${theme.font.weight.weight3};
     text-transform: uppercase;
     color: ${theme.colors.bg};

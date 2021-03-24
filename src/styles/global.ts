@@ -72,7 +72,7 @@ const GlobalStyles = createGlobalStyle`
 
     body {
       font-family: ${theme.font.family};
-      font-size: ${theme.font.sizes.medium};
+      font-size: ${theme.sizes.medium};
       color: ${theme.colors.text};
 
       background-color: ${theme.colors.bg};
