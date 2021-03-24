@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.ul`
   list-style: none;
@@ -9,9 +10,17 @@ export const NavItem = styled.li`
     margin: ${theme.sizes.medium};
     padding: ${theme.sizes.xxsmall} ${theme.sizes.tiny};
 
-    display: inline-block;
+    display: block;
 
     position: relative;
+
+    text-align: center;
+
+    ${media.greaterThan('medium')`
+      margin: ${theme.sizes.xsmall};
+
+      display: inline-block;
+    `}
   `}
 `
 
@@ -19,7 +28,7 @@ export const NavLink = styled.a`
   ${({ theme }) => css`
     display: block;
 
-    font-size: ${theme.sizes.small};
+    font-size: ${theme.sizes.large};
     font-weight: ${theme.font.weight.weight3};
     text-decoration: none;
     text-transform: uppercase;
@@ -28,7 +37,7 @@ export const NavLink = styled.a`
     ::after {
       content: '';
       width: 100%;
-      height: ${theme.sizes.tiny};
+      height: 0.4rem;
 
       position: absolute;
       bottom: 0;
@@ -46,5 +55,9 @@ export const NavLink = styled.a`
         transform: scaleX(1);
       }
     }
+
+    ${media.greaterThan('medium')`
+      font-size: ${theme.sizes.xsmall};
+    `}
   `}
 `

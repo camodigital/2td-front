@@ -1,11 +1,16 @@
 import styled, { DefaultTheme, css } from 'styled-components'
 import { TheContainerProps } from '.'
+import media from 'styled-media-query'
 
 const wrapperModifiers = {
   full: (theme: DefaultTheme) => css`
     width: 100%;
     min-height: 50px;
-    padding: ${theme.spacings.medium};
+    padding: ${theme.spacings.xsmall};
+
+    ${media.greaterThan('medium')`
+      padding: ${theme.spacings.medium};
+    `}
   `,
   medium: (theme: DefaultTheme) => css`
     width: 100%;

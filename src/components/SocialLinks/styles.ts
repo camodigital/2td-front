@@ -1,13 +1,18 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.ul``
 
 export const SocialItem = styled.li`
   ${({ theme }) => css`
-    min-width: 30px;
+    min-width: ${theme.sizes.xlarge};
     margin: 0 ${theme.spacings.tiny};
 
     display: inline-block;
+
+    ${media.greaterThan('medium')`
+      min-width: ${theme.sizes.large};
+    `}
   `}
 `
 

@@ -7,13 +7,13 @@ const SocialLinks = () => (
   <S.Wrapper>
     <S.SocialItem>
       <S.SocialLink>
-        <IcoLinkedin />
+        <IcoLinkedin aria-label="Nosso Linkedin" />
       </S.SocialLink>
     </S.SocialItem>
 
     <S.SocialItem>
       <S.SocialLink>
-        <IcoInstagram />
+        <IcoInstagram aria-label="Abrir Instragram" />
       </S.SocialLink>
     </S.SocialItem>
   </S.Wrapper>

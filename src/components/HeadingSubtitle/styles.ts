@@ -8,7 +8,7 @@ export const Wrapper = styled.h3`
     color: ${theme.colors.text};
 
     ${media.greaterThan('medium')`
-    font-size: ${theme.sizes.medium};
-  `}
+      font-size: ${theme.sizes.medium};
+    `}
   `}
 `
