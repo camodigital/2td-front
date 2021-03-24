@@ -1,4 +1,4 @@
-const icoEmail = () => (
+const IcoEmail = () => (
   <svg fill="none" viewBox="0 0 28 21">
     <path
       d="M17.339 16.05H1.659a.755.755 0 01-.754-.753V1.658c0-.415.338-.753.753-.753h20.204c.416 0 .754.338.754.753v9.116a.452.452 0 10.904 0V1.658A1.66 1.66 0 0021.862 0H1.658A1.66 1.66 0 000 1.658v13.639a1.66 1.66 0 001.658 1.658h15.68a.452.452 0 100-.904z"
@@ -15,4 +15,4 @@ const icoEmail = () => (
   </svg>
 )
 
-export default icoEmail
+export default IcoEmail

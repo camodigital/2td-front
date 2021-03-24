@@ -1,4 +1,4 @@
-const icoPhone = () => (
+const IcoPhone = () => (
   <svg fill="none" viewBox="0 0 13 21">
     <path
       d="M6.338 17.553a1.017 1.017 0 000 2.03 1.017 1.017 0 000-2.03zm0 1.354a.339.339 0 110-.678.339.339 0 010 .678zM4.91 2.754h2.856a.338.338 0 100-.677H4.91a.338.338 0 000 .677z"
@@ -11,4 +11,4 @@ const icoPhone = () => (
   </svg>
 )
 
-export default icoPhone
+export default IcoPhone

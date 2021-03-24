@@ -1,4 +1,4 @@
-const icoArrowDown = () => (
+const IcoArrowDown = () => (
   <svg fill="none" viewBox="0 0 16 18">
     <g clipPath="url(#clip0)">
       <path
@@ -14,4 +14,4 @@ const icoArrowDown = () => (
   </svg>
 )
 
-export default icoArrowDown
+export default IcoArrowDown
