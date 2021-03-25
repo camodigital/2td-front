@@ -1,3 +1,7 @@
 import styled from 'styled-components'
 
-export const Wrapper = styled.header``
+export const Wrapper = styled.header`
+  width: 100%;
+
+  position: absolute;
+`

@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   max-width: 26rem;
 
   ${media.greaterThan('medium')`
-    max-width: 56rem;;
+    max-width: 56rem;
   `}
 `
 export const PreTitle = styled.div``
