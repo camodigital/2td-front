@@ -17,6 +17,9 @@ export const Wrapper = styled.div`
     transition: 0.5s;
 
     ${media.greaterThan('medium')`
+      border-top: 1px solid ${theme.colors.textLight};
+      border-bottom: 1px solid ${theme.colors.textLight};
+
       :hover {
         border-radius: 1rem;
 
