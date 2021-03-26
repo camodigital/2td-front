@@ -3,7 +3,7 @@ import media from 'styled-media-query'
 
 export const Wrapper = styled.h3`
   ${({ theme }) => css`
-    font-size: ${theme.sizes.small};
+    font-size: ${theme.sizes.xsmall};
     font-weight: ${theme.font.weight.weight1};
     color: ${theme.colors.text};
 

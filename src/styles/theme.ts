@@ -5,6 +5,7 @@ import colors from './theme/colors'
 import sizes from './theme/sizes'
 import spacings from './theme/spacings'
 import layers from './theme/layers'
+import shadows from './theme/shadows'
 
 export default {
   grid,
@@ -13,5 +14,6 @@ export default {
   colors,
   sizes,
   spacings,
-  layers
+  layers,
+  shadows
 }
