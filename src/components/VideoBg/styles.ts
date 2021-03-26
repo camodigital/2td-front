@@ -6,7 +6,8 @@ export const VideoSmall = styled.div`
   ${({ theme }) => css`
     position: relative;
 
-    video: {
+    video {
+      height: 100vh;
       position: relative;
       z-index: -2;
     }
