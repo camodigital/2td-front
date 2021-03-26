@@ -1,7 +1,12 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const Wrapper = styled.header`
-  width: 100%;
+  ${({ theme }) => css`
+    width: 100%;
 
-  position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: ${theme.layers.menu};
+  `}
 `

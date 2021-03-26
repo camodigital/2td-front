@@ -21,10 +21,15 @@ const wrapperModifiers = {
   `,
   right: (theme: DefaultTheme) => css`
     width: 100%;
-    min-height: 50px;
-    max-width: ${theme.sizes.containerMedium};
     margin: 0 0 0 auto;
-    padding: ${theme.spacings.medium};
+    padding-left: ${theme.spacings.medium};
+
+    ${media.greaterThan('medium')`
+      width: 100%;
+      max-width: 80%;
+      margin: 0 0 0 auto;
+      padding-left: ${theme.spacings.medium};
+    `}
   `
 }
 

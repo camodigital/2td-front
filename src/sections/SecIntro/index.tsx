@@ -6,7 +6,7 @@ import VideoBg from 'components/VideoBg'
 
 const SecIntro = () => (
   <S.Wrapper>
-    <TheContainer size="medium">
+    <TheContainer size="right">
       <S.Hero>
         <HeroHome />
       </S.Hero>
