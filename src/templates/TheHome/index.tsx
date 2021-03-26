@@ -4,6 +4,7 @@ import SecIntro from 'sections/SecIntro'
 import SecProducts from 'sections/SecProducts'
 import SecAbout from 'sections/SecAbout'
 import SecClients from 'sections/SecClients'
+import SecContact from 'sections/SecContact'
 
 const TheHome = () => (
   <S.Wrapper>
@@ -11,6 +12,7 @@ const TheHome = () => (
     <SecProducts />
     <SecAbout />
     <SecClients />
+    <SecContact />
   </S.Wrapper>
 )
 
