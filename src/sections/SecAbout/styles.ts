@@ -20,7 +20,6 @@ export const Header = styled.div`
 
 export const Content = styled.div`
   ${({ theme }) => css`
-    margin-bottom: ${theme.spacings.medium};
     padding: ${theme.spacings.medium};
 
     position: relative;
