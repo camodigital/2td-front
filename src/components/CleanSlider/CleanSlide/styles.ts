@@ -4,7 +4,6 @@ export const Container = styled.div`
   ${({ theme }) => css`
     padding: ${theme.spacings.xxlarge};
 
-    border: 1px solid ${theme.colors.textLight};
     border-radius: 0.4rem;
 
     box-shadow: ${theme.shadows.bigShadow};

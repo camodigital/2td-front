@@ -47,7 +47,7 @@ export const Clients = styled.ul`
 
       img {
         width: auto;
-        height: ${theme.sizes.xxxlarge};
+        height: ${theme.sizes.xxlarge};
       }
     }
   `}
