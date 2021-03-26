@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
@@ -15,17 +16,19 @@ export const Wrapper = styled.div`
 
     transition: 0.5s;
 
-    :hover {
-      border-radius: 1rem;
+    ${media.greaterThan('medium')`
+      :hover {
+        border-radius: 1rem;
 
-      box-shadow: ${theme.shadows.littleShadow};
-    }
+        box-shadow: ${theme.shadows.littleShadow};
+      }
 
-    &.active {
-      border-radius: 1rem;
+      &.active {
+        border-radius: 1rem;
 
-      box-shadow: ${theme.shadows.littleShadow};
-    }
+        box-shadow: ${theme.shadows.littleShadow};
+      }
+    `}
   `}
 `
 
