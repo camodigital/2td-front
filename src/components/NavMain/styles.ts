@@ -129,6 +129,8 @@ export const NavFullContainer = styled.div<NavFullContainerProps>`
 
     transition: 0.5s ease-in-out;
 
+    pointer-events: ${isOpen ? 'all' : 'none'};
+
     ${NavFullLinks}, ${NavFullSocial}, ${NavFullButton} {
       transform: ${isOpen ? 'translateY(0)' : 'translateY(3rem)'};
 
