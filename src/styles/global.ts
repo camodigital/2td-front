@@ -55,6 +55,8 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
 
+    list-style: none;
+
     box-sizing: border-box;
 
     outline: none;
@@ -83,6 +85,14 @@ const GlobalStyles = createGlobalStyle`
       ${media.greaterThan('medium')`
         font-size: ${theme.sizes.medium};
       `}
+    }
+
+    p {
+      padding-bottom: ${theme.spacings.small};
+
+      :last-child {
+        margin-bottom: 0;
+      }
     }
   `}
 `
