@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
   position: relative;
@@ -29,6 +30,15 @@ export const Infos = styled.div`
     .text {
     }
   }
+
+  ${media.greaterThan(`medium`)`
+    display: flex;
+    justify-content: center;
+
+    .item{
+      width: 50%;
+    }
+  `}
 `
 
 export const Title = styled.div``

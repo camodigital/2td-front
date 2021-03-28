@@ -53,7 +53,7 @@ const SecProducts = () => (
           </li>
         </S.Itens>
 
-        <MediaMatch greaterThan="medium">
+        <MediaMatch greaterThan="large">
           <S.Photo>photo</S.Photo>
         </MediaMatch>
       </S.Content>
