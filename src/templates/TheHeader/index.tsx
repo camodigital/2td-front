@@ -10,7 +10,6 @@ const TheHeader = () => {
   useEffect(() => {
     document.addEventListener('scroll', function () {
       const yOffset = window.pageYOffset
-      console.log(yOffset)
 
       if (yOffset > 10) {
         setScrolling(true)

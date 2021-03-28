@@ -13,6 +13,10 @@ export const SocialItem = styled.li`
     ${media.greaterThan('medium')`
       min-width: ${theme.sizes.large};
     `}
+
+    ${media.greaterThan('large')`
+      width: 2rem;
+    `}
   `}
 `
 

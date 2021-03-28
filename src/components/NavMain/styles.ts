@@ -29,6 +29,10 @@ export const Brand = styled.div`
 
     position: relative;
     z-index: ${theme.layers.menuHead};
+
+    ${media.greaterThan('large')`
+      width: 11rem;
+    `}
   `}
 `
 
