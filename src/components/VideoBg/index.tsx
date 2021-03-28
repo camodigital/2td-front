@@ -7,7 +7,7 @@ const VideoBg = () => {
 
   return (
     <S.Wrapper>
-      <MediaMatch lessThan="medium">
+      <MediaMatch lessThan="large">
         <S.VideoSmall>
           <S.VideoSmallContainer>
             <video autoPlay loop muted poster="images/bg-video.jpg">

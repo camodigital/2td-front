@@ -82,7 +82,7 @@ const GlobalStyles = createGlobalStyle`
 
       background-color: ${theme.colors.bg};
 
-      ${media.greaterThan('medium')`
+      ${media.greaterThan('large')`
         font-size: ${theme.sizes.medium};
       `}
     }

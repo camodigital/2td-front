@@ -20,7 +20,7 @@ const NavMain = () => {
         </S.Brand>
 
         {/* nav full is mobile */}
-        <MediaMatch lessThan="medium">
+        <MediaMatch lessThan="large">
           <S.NavFull>
             <S.NavFullControl
               aria-label={isOpen ? 'Fechar o Menu' : 'Abrir o Menu'}
@@ -49,7 +49,7 @@ const NavMain = () => {
         </MediaMatch>
 
         {/* nav */}
-        <MediaMatch greaterThan="medium">
+        <MediaMatch greaterThan="large">
           <S.Nav>
             <S.NavContainer>
               <S.NavLinks>

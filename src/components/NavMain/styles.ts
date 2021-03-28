@@ -33,7 +33,14 @@ export const Brand = styled.div`
 `
 
 // NavFull is mobile
-export const NavFull = styled.nav``
+export const NavFull = styled.nav`
+  ${media.greaterThan('medium')`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+  `}
+`
 
 export const NavFullControl = styled.div`
   ${({ theme }) => css`

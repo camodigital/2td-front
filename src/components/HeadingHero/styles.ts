@@ -13,11 +13,11 @@ export const Wrapper = styled.h1`
       color: ${theme.colors.primary};
     }
 
-    ${media.greaterThan('small')`
+    ${media.greaterThan('medium')`
       font-size: ${theme.sizes.xxlarge};
     `}
 
-    ${media.greaterThan('medium')`
+    ${media.greaterThan('large')`
       font-size: ${theme.sizes.xxxlarge};
     `}
   `}

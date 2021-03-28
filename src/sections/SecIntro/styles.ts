@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
 
   overflow-x: hidden;
 
-  ${media.greaterThan('medium')`
+  ${media.greaterThan('large')`
     .theContainer {
       height: 100vh;
 
@@ -29,7 +29,7 @@ export const Hero = styled.div`
 
   position: relative;
 
-  ${media.greaterThan('medium')`
+  ${media.greaterThan('large')`
     display: flex;
     flex-direction: column;
     justify-content: center;
