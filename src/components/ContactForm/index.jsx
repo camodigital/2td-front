@@ -1,0 +1,182 @@
+import { useRef, useState } from 'react'
+import * as emailjs from 'emailjs-com'
+import Recaptcha from 'react-recaptcha'
+
+import * as S from './styles'
+
+import Button from 'components/ButtonGeral'
+
+export default function ContactUs() {
+  const [recaptchaLoad, setRecaptchaLoad] = useState(false)
+  const [isVerified, setIsVerified] = useState(false)
+  const [fieldActive, setFieldActive] = useState(false)
+  const [showCaptcha, setShowCaptcha] = useState(false)
+  const [showWarningFill, setShowWarningFill] = useState(false)
+  const [showWarningSucess, setShowWarningSucess] = useState(false)
+  const [showWarningError, setShowWarningError] = useState(false)
+  const [showWarningCaptcha, setShowWarningCaptcha] = useState(false)
+  const nameRef = useRef(null)
+  const emailRef = useRef(null)
+  const messageRef = useRef(null)
+
+  const recaptchaLoaded = () => {
+    setRecaptchaLoad(true)
+  }
+
+  const verifiedRecaptcha = (response) => {
+    if (response) {
+      setIsVerified(true)
+    }
+  }
+
+  function sendEmail(e) {
+    e.preventDefault()
+    const templateParams = {
+      from_name: nameRef.current.value,
+      from_email: emailRef.current.value,
+      to_name: '2TD',
+      message: messageRef.current.value
+    }
+    if (
+      nameRef.current.value !== '' &&
+      emailRef.current.value !== '' &&
+      messageRef.current.value !== ''
+    ) {
+      setShowWarningFill(false)
+
+      if (recaptchaLoad && isVerified) {
+        emailjs
+          .send(
+            process.env.NEXT_PUBLIC_SERVICE_ID,
+            process.env.NEXT_PUBLIC_TEMPLATE_ID,
+            templateParams,
+            process.env.NEXT_PUBLIC_EMAILJS_USER_ID
+          )
+          .then(
+            (result) => {
+              setShowWarningSucess(true)
+              setShowWarningFill(false)
+              setShowWarningCaptcha(false)
+              setShowWarningError(false)
+              setShowCaptcha(false)
+              console.log(result)
+
+              nameRef.current.value = null
+              emailRef.current.value = null
+              messageRef.current.value = null
+
+              setTimeout(function () {
+                setShowWarningSucess(false)
+              }, 2000)
+            },
+            (error) => {
+              setShowWarningError(true)
+              console.log(error.text)
+            }
+          )
+      } else {
+        setShowWarningCaptcha(true)
+        console.error('Please check reCaptcha and try again.')
+      }
+    } else {
+      setShowWarningFill(true)
+    }
+  }
+
+  function handlerCaptcha() {
+    if (
+      nameRef.current.value !== '' &&
+      emailRef.current.value !== '' &&
+      messageRef.current.value !== ''
+    ) {
+      setShowCaptcha(true)
+      setShowWarningFill(false)
+      setShowWarningSucess(false)
+      setShowWarningError(false)
+    } else {
+      setShowCaptcha(false)
+    }
+  }
+
+  function handlerFocusField() {
+    setFieldActive(true)
+  }
+
+  return (
+    <S.Wrapper onKeyUp={handlerCaptcha}>
+      <form className="contact-form" onSubmit={sendEmail}>
+        <S.Warnings>
+          <S.WarningFill className={showWarningFill ? 'show' : 'hide'}>
+            Todos os campos são obrigatórios. Por favor preencha corretamente.
+          </S.WarningFill>
+
+          <S.WarningSucess className={showWarningSucess ? 'show' : 'hide'}>
+            Obrigado por entrar em contato. retornaremos assim que possível.
+          </S.WarningSucess>
+
+          <S.WarningError className={showWarningError ? 'show' : 'hide'}>
+            Por favor check reCaptcha e tente novamente.
+          </S.WarningError>
+
+          <S.WarningCaptcha className={showWarningCaptcha ? 'show' : 'hide'}>
+            Por favor check reCaptcha e tente novamente.
+          </S.WarningCaptcha>
+        </S.Warnings>
+
+        <S.InputGroup
+          onKeyUp={handlerCaptcha}
+          onFocus={handlerFocusField}
+          className={fieldActive ? 'active' : ''}
+        >
+          <label>Nome</label>
+          <input
+            type="text"
+            name="user_name"
+            className="from-name"
+            onFocus={handlerFocusField}
+            ref={nameRef}
+          />
+        </S.InputGroup>
+
+        <S.InputGroup
+          onKeyUp={handlerCaptcha}
+          onFocus={handlerFocusField}
+          className={fieldActive ? 'active' : ''}
+        >
+          <label>E-mail</label>
+          <input
+            type="email"
+            name="user_email"
+            className="from-email"
+            ref={emailRef}
+          />
+        </S.InputGroup>
+
+        <S.TextareaGroup
+          onKeyUp={handlerCaptcha}
+          onFocus={handlerFocusField}
+          className={fieldActive ? 'active' : ''}
+        >
+          <label>Mensagem</label>
+          <textarea name="message" ref={messageRef} />
+        </S.TextareaGroup>
+
+        <S.Recaptcha className={showCaptcha ? 'show' : 'hide'}>
+          <Recaptcha
+            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+            render="explicit"
+            hl="pt-BR"
+            onloadCallback={recaptchaLoaded}
+            verifyCallback={verifiedRecaptcha}
+          />
+        </S.Recaptcha>
+
+        <S.Button>
+          <Button type="submit" value="Send">
+            Enviar
+          </Button>
+        </S.Button>
+      </form>
+    </S.Wrapper>
+  )
+}
