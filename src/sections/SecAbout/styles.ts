@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
   position: relative;
@@ -8,6 +9,11 @@ export const BGVerde = styled.div`
   width: 80%;
 
   position: absolute;
+
+  ${media.greaterThan('medium')`
+
+    width: 20%;
+  `}
 `
 
 export const Header = styled.div`
