@@ -1,10 +1,15 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
   position: relative;
 
   background-color: white;
+  ${media.greaterThan(`large`)`
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 1fr;
+  `}
 `
 export const Header = styled.div`
   margin-bottom: 3rem;
@@ -45,10 +50,24 @@ export const Title = styled.div``
 
 export const Subtitle = styled.div``
 
-export const Content = styled.div``
+export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  ${media.greaterThan(`large`)`
+    padding: 10rem 3rem;
+  `}
+`
 
 export const Map = styled.div`
-  display: none;
+  ${({ theme }) => css`
+    ${media.greaterThan(`large`)`
+      height: 100%;
+      box-shadow: ${theme.shadows.bigShadow};
+    `}
+  `}
 `
 
 export const Form = styled.div``
