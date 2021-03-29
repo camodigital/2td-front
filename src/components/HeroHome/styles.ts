@@ -7,10 +7,26 @@ export const Wrapper = styled.div`
   ${media.greaterThan('medium')`
     max-width: 38rem;
   `}
+
+  ${media.greaterThan('large')`
+    max-width: 46rem;
+  `}
+
+  ${media.greaterThan('huge')`
+    max-width: 60rem;
+  `}
+
+  @media (min-width: 2500px) {
+    max-width: 90rem;
+  }
 `
 export const PreTitle = styled.div``
 export const Title = styled.div``
-export const Text = styled.div``
+export const Text = styled.div`
+  @media (min-width: 2500px) {
+    max-width: 60rem;
+  }
+`
 export const Button = styled.div`
   ${({ theme }) => css`
     margin-top: ${theme.spacings.small};

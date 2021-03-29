@@ -35,6 +35,10 @@ export const SocialLink = styled.a`
         :hover {
           fill: ${theme.colors.primary};
         }
+
+        @media (min-width: 1550px) {
+          fill: ${theme.colors.bg};
+        }
       }
     }
   `}

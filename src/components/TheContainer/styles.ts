@@ -13,6 +13,10 @@ const wrapperModifiers = {
     ${media.greaterThan('medium')`
       padding: ${theme.spacings.medium};
     `}
+
+    @media (min-width: 2500px) {
+      padding: 4rem 8rem;
+    }
   `,
   medium: (theme: DefaultTheme) => css`
     width: 100%;

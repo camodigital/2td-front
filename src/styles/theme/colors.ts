@@ -12,7 +12,9 @@ const options = {
     light: '#FAFAFA',
     gradients: {
       primary: `linear-gradient(90deg, #A1C616 0%, #B2DF00 50%);`,
-      primaryHover: `linear-gradient(90deg, #A1C616 20%, #B2DF00 80%);`
+      primaryHover: `linear-gradient(90deg, #A1C616 20%, #B2DF00 80%);`,
+      darkAlpha:
+        'linear-gradient(35deg, rgba(000,000,000,.3) 0%, rgba(000,000,000,1) 100%);'
     }
   },
   dark: {

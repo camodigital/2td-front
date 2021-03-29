@@ -21,6 +21,12 @@ export const Wrapper = styled.div`
       grid-template-rows: 1fr;
     }
   `}
+
+  ${media.greaterThan('huge')`
+    .theContainer {
+      grid-template-columns: 60% 1fr;
+    }
+  `}
 `
 
 export const Hero = styled.div`

@@ -84,7 +84,15 @@ const GlobalStyles = createGlobalStyle`
 
       ${media.greaterThan('large')`
         font-size: ${theme.sizes.medium};
+
+        position: relative;
+
+        overflow-x: hidden;
       `}
+
+      @media (min-width: 2500px) {
+        font-size: 2rem;
+      }
     }
 
     p {
