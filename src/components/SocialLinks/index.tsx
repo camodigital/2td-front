@@ -4,7 +4,7 @@ import IcoLinkedin from 'icons/IcoLinkedin'
 import IcoInstagram from 'icons/IcoInstagram'
 
 const SocialLinks = () => (
-  <S.Wrapper>
+  <S.Wrapper className="social-links">
     <S.SocialItem>
       <S.SocialLink>
         <IcoLinkedin aria-label="Nosso Linkedin" />

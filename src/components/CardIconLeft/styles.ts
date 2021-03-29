@@ -56,6 +56,11 @@ export const Icon = styled.div`
       width: ${theme.sizes.xxlarge};
       height: ${theme.sizes.xxlarge};
     }
+
+    ${media.greaterThan('huge')`
+      width: 5rem;
+      height: 5rem;
+    `}
   `}
 `
 

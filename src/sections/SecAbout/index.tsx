@@ -1,62 +1,74 @@
 import ButtonGeral from 'components/ButtonGeral'
 import HeadingArea from 'components/HeadingArea'
 import HeadingSection from 'components/HeadingSection'
+import MediaMatch from 'components/MediaMatch'
 import TheContainer from 'components/TheContainer'
 import BGVerde from 'icons/BGVerde'
 import * as S from './styles'
 
 const SecAbout = () => (
   <S.Wrapper>
-    <S.BGVerde>
-      <BGVerde />
-    </S.BGVerde>
+    <MediaMatch lessThan="large">
+      <S.BGVerde>
+        <BGVerde />
+      </S.BGVerde>
+    </MediaMatch>
+
     <TheContainer size="medium">
-      <S.Header>
-        <HeadingSection>
-          A melhor Equipe da <br />
-          <strong>América Latina</strong>
-        </HeadingSection>
-      </S.Header>
+      <MediaMatch greaterThan="large">
+        <S.Phone>
+          <img src="images/phone.png" alt="Telefone celular" />
+        </S.Phone>
+      </MediaMatch>
 
-      <S.Content>
-        <S.Text>
-          <p>
-            Equipe 100% certificada Dynatrace Associate + Três primeiros
-            especialistas com certificação Dynatrace Professional LATAM
-          </p>
-          <p>
-            Com a aplicação de observability, conseguimos atuar na causa raiz do
-            problema. A 2TD é expert em investigar, identificar alertas,
-            monitorar, descobrir, analisar e entender o problema para propor
-            soluções. O método de trabalho da 2TD concilia as melhoras práticas
-            de PDCA, LeanIT e metodologias ágeis.
-          </p>
-        </S.Text>
+      <S.Box>
+        <S.Header>
+          <HeadingSection>
+            A melhor Equipe da <br />
+            <strong>América Latina</strong>
+          </HeadingSection>
+        </S.Header>
 
-        <S.Partnerships>
-          <div className="title">
-            <HeadingArea>Parcerias:</HeadingArea>
-          </div>
+        <S.Content>
+          <S.Text>
+            <p>
+              Equipe 100% certificada Dynatrace Associate + Três primeiros
+              especialistas com certificação Dynatrace Professional LATAM
+            </p>
+            <p>
+              Com a aplicação de observability, conseguimos atuar na causa raiz
+              do problema. A 2TD é expert em investigar, identificar alertas,
+              monitorar, descobrir, analisar e entender o problema para propor
+              soluções. O método de trabalho da 2TD concilia as melhoras
+              práticas de PDCA, LeanIT e metodologias ágeis.
+            </p>
+          </S.Text>
 
-          <ul className="itens">
-            <li>
-              <img src="images/logoDynatrace.svg" alt="Dynatrace" />
-            </li>
+          <S.Partnerships>
+            <div className="title">
+              <HeadingArea>Parcerias:</HeadingArea>
+            </div>
 
-            <li>
-              <img src="images/logoAws.svg" alt="AWS" />
-            </li>
+            <ul className="itens">
+              <li>
+                <img src="images/logoDynatrace.svg" alt="Dynatrace" />
+              </li>
 
-            <li>
-              <img src="images/logoAzure.svg" alt="Azure" />
-            </li>
-          </ul>
-        </S.Partnerships>
+              <li>
+                <img src="images/logoAws.svg" alt="AWS" />
+              </li>
 
-        <S.Button>
-          <ButtonGeral>Saiba Mais</ButtonGeral>
-        </S.Button>
-      </S.Content>
+              <li>
+                <img src="images/logoAzure.svg" alt="Azure" />
+              </li>
+            </ul>
+          </S.Partnerships>
+
+          <S.Button>
+            <ButtonGeral>Saiba Mais</ButtonGeral>
+          </S.Button>
+        </S.Content>
+      </S.Box>
     </TheContainer>
   </S.Wrapper>
 )

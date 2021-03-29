@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
@@ -33,6 +34,11 @@ export const Content = styled.div``
 export const Testimony = styled.div`
   ${({ theme }) => css`
     margin-bottom: ${theme.spacings.xxxlarge};
+
+    ${media.greaterThan('large')`
+      max-width: 70rem;
+      margin: 0 auto;
+    `}
   `}
 `
 

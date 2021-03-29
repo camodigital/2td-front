@@ -57,7 +57,7 @@ export const NavLink = styled.a`
     }
 
     ${media.greaterThan('large')`
-      font-size: ${theme.sizes.xsmall};
+      font-size: ${theme.sizes.small};
     `}
   `}
 `

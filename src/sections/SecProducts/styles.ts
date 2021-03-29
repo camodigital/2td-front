@@ -7,8 +7,8 @@ export const Wrapper = styled.div`
 
     background-color: ${theme.colors.bg};
 
-    ${media.greaterThan('large')`
-      height: 100vh;
+    ${media.greaterThan('huge')`
+      padding: 10rem 0;
     `}
   `}
 `
@@ -58,13 +58,10 @@ export const Itens = styled.ul`
     .item {
       margin-bottom: 0;
 
-      border-top: 1px solid ${theme.colors.textLight};
-
       transition: .5s;
 
       :last-child {
         margin-bottom: 0;
-        border-bottom: 1px solid ${theme.colors.textLight};
       }
 
       :hover{

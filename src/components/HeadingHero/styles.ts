@@ -24,7 +24,8 @@ export const Wrapper = styled.h1`
     `}
 
     ${media.greaterThan('huge')`
-      font-size: 4.5rem;
+      margin: 1rem 0 3rem;
+      font-size: 4rem;
     `}
 
     @media (min-width: 2500px) {

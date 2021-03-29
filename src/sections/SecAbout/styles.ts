@@ -3,6 +3,18 @@ import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
   position: relative;
+
+  ${media.greaterThan('large')`
+    .theContainer{
+      display: grid;
+      grid-template-columns: 40% 60%;
+      grid-template-rows: 1fr;
+    }
+  `}
+
+  ${media.greaterThan('huge')`
+    padding: 10rem 0;
+  `}
 `
 
 export const BGVerde = styled.div`
@@ -15,6 +27,8 @@ export const BGVerde = styled.div`
     width: 20%;
   `}
 `
+
+export const Box = styled.div``
 
 export const Header = styled.div`
   ${({ theme }) => css`
@@ -55,9 +69,19 @@ export const Partnerships = styled.div`
         img {
           height: ${theme.sizes.small};
         }
+
+        ${media.greaterThan('large')`
+          padding: ${theme.spacings.small};
+
+          img {
+            height: ${theme.sizes.xlarge};
+          }
+        `}
       }
     }
   `}
 `
 
 export const Button = styled.div``
+
+export const Phone = styled.div``

@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import media from 'styled-media-query'
 
 import { ICarouselSlide, ICarouselProps } from '.'
 
@@ -54,6 +55,18 @@ export const ButtonContainer = styled.div`
     right: 0;
     transform: translateX(3rem);
   }
+
+  ${media.greaterThan('large')`
+    &.left {
+      left: 0;
+      transform: translateX(-10rem);
+    }
+
+    &.right {
+      right: 0;
+      transform: translateX(10rem);
+    }
+  `}
 `
 
 export const Button = styled.div`

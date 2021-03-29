@@ -20,5 +20,9 @@ export const Wrapper = styled.h2`
     ${media.greaterThan('medium')`
       font-size: ${theme.sizes.xxlarge};
     `}
+
+    ${media.greaterThan('huge')`
+      font-size: ${theme.sizes.xxxlarge};
+    `}
   `}
 `

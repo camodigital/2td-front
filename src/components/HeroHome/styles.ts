@@ -13,7 +13,7 @@ export const Wrapper = styled.div`
   `}
 
   ${media.greaterThan('huge')`
-    max-width: 60rem;
+    max-width: 52rem;
   `}
 
   @media (min-width: 2500px) {
@@ -23,6 +23,10 @@ export const Wrapper = styled.div`
 export const PreTitle = styled.div``
 export const Title = styled.div``
 export const Text = styled.div`
+  ${media.greaterThan('huge')`
+    max-width: 50rem;
+  `}
+
   @media (min-width: 2500px) {
     max-width: 60rem;
   }
