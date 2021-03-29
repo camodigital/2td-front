@@ -12,7 +12,7 @@ const HeroHome = () => (
 
     <S.Title>
       <HeadingHero>
-        <strong>Promovemos</strong> Tecnologia e Transformação Digital
+        <strong>Promovemos</strong> Tecnologia <br />e Transformação Digital
       </HeadingHero>
     </S.Title>
 

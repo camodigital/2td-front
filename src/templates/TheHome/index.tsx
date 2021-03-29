@@ -6,28 +6,29 @@ import SecAbout from 'sections/SecAbout'
 import SecClients from 'sections/SecClients'
 import SecContact from 'sections/SecContact'
 import VideoBgMask from 'components/VideoBgMask'
-import BGVerde from 'icons/BGVerde'
 
 const TheHome = () => (
   <S.Wrapper className="page">
     <section className="section">
       <SecIntro />
     </section>
+
     <section className="section">
       <VideoBgMask />
     </section>
+
     <section className="section" id="servicos">
       <SecProducts />
     </section>
+
     <section className="section section-about">
       <SecAbout />
-      <div className="bg-verde">
-        <BGVerde />
-      </div>
     </section>
+
     <section className="section">
       <SecClients />
     </section>
+
     <section className="section">
       <SecContact />
     </section>

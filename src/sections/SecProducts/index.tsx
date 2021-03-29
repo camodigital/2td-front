@@ -43,7 +43,7 @@ const SecProducts = () => {
         <S.Header>
           <S.Title>
             <HeadingSection>
-              Nossos <strong>Produtos</strong>
+              Nossos <strong>Serviços</strong>
             </HeadingSection>
           </S.Title>
 

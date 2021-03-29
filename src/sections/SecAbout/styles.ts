@@ -18,14 +18,29 @@ export const Wrapper = styled.div`
 `
 
 export const BGVerde = styled.div`
-  width: 80%;
+  svg {
+    position: absolute;
+    z-index: -1;
 
-  position: absolute;
+    transform-origin: 50% right;
+    transform: translateX(-60%) translateY(30%);
 
-  ${media.greaterThan('medium')`
+    ${media.greaterThan('medium')`
+      transform: translateX(-60%) translateY(-20%);
+    `}
 
-    width: 20%;
-  `}
+    ${media.greaterThan('large')`
+      transform: translateX(-60%) translateY(-20%);
+    `}
+
+    ${media.greaterThan('huge')`
+      transform: translateX(-55%) translateY(-30%);
+    `}
+
+    @media (min-width: 2500px) {
+      transform: translateX(-54%) translateY(-37%);
+    }
+  }
 `
 
 export const Box = styled.div``
@@ -47,6 +62,10 @@ export const Content = styled.div`
     border-radius: 0.4rem;
 
     background: rgba(250, 250, 250, 0.9);
+
+    ${media.greaterThan('large')`
+      background: transparent;
+    `}
   `}
 `
 
@@ -84,4 +103,6 @@ export const Partnerships = styled.div`
 
 export const Button = styled.div``
 
-export const Phone = styled.div``
+export const Phone = styled.div`
+  position: relative;
+`

@@ -10,6 +10,14 @@ export const Wrapper = styled.div`
     overflow: hidden;
 
     background-color: ${theme.colors.bg};
+
+    ${media.greaterThan('large')`
+      background-color: transparent;
+    `}
+
+    ${media.greaterThan('huge')`
+      padding: 10rem 0;
+    `}
   `}
 `
 
@@ -18,6 +26,10 @@ export const Header = styled.header`
     margin-bottom: ${theme.spacings.medium};
 
     text-align: center;
+
+    ${media.greaterThan('large')`
+      margin-bottom: ${theme.spacings.xxxlarge};
+    `}
   `}
 `
 
@@ -37,7 +49,7 @@ export const Testimony = styled.div`
 
     ${media.greaterThan('large')`
       max-width: 70rem;
-      margin: 0 auto;
+      margin: 8rem auto;
     `}
   `}
 `
@@ -54,6 +66,10 @@ export const Clients = styled.ul`
       img {
         width: auto;
         height: ${theme.sizes.xxlarge};
+
+        ${media.greaterThan('large')`
+          height: ${theme.sizes.xxxlarge};
+        `}
       }
     }
   `}

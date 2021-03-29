@@ -8,11 +8,9 @@ import * as S from './styles'
 
 const SecAbout = () => (
   <S.Wrapper>
-    <MediaMatch lessThan="large">
-      <S.BGVerde>
-        <BGVerde />
-      </S.BGVerde>
-    </MediaMatch>
+    <S.BGVerde>
+      <BGVerde />
+    </S.BGVerde>
 
     <TheContainer size="medium">
       <MediaMatch greaterThan="large">

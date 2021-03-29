@@ -18,20 +18,5 @@ export const Wrapper = styled.div`
 
   .section-about {
     position: relative;
-
-    .bg-verde {
-      width: 500px;
-      height: 500px;
-
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 200;
-
-      svg {
-        width: 200px;
-        height: 200px;
-      }
-    }
   }
 `

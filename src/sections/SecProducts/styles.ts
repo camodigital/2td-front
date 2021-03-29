@@ -9,6 +9,8 @@ export const Wrapper = styled.div`
 
     ${media.greaterThan('huge')`
       padding: 10rem 0;
+
+      background-color: transparent;
     `}
   `}
 `

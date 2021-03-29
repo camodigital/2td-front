@@ -30,7 +30,7 @@ export const Wrapper = styled.h1`
 
     @media (min-width: 2500px) {
       margin: 1rem 0 3rem;
-      font-size: 7rem;
+      font-size: 5rem;
     }
   `}
 `
