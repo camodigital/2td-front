@@ -11,39 +11,30 @@ import IcoCloud from 'icons/IcoCloud'
 import IcoRobot from 'icons/IcoRobot'
 
 const SecProducts = () => {
-  const [itemOne, setItemOne] = useState(false)
+  const [itemOne, setItemOne] = useState(true)
   const [itemTwo, setItemTwo] = useState(false)
   const [itemThree, setItemThree] = useState(false)
   const [itemFour, setItemFour] = useState(true)
 
   function handleEnterOne() {
     setItemOne(true)
+    setItemTwo(false)
+    setItemThree(false)
     setItemFour(false)
-  }
-
-  function handleLeaveOne() {
-    setItemOne(false)
-    setItemFour(true)
   }
 
   function handleEnterTwo() {
+    setItemOne(false)
     setItemTwo(true)
+    setItemThree(false)
     setItemFour(false)
-  }
-
-  function handleLeaveTwo() {
-    setItemTwo(false)
-    setItemFour(true)
   }
 
   function handleEnterThree() {
+    setItemOne(false)
+    setItemTwo(false)
     setItemThree(true)
     setItemFour(false)
-  }
-
-  function handleLeaveThree() {
-    setItemThree(false)
-    setItemFour(true)
   }
 
   return (
@@ -68,7 +59,6 @@ const SecProducts = () => {
             <li
               className={`item ${itemOne ? 'active' : ''}`}
               onMouseEnter={handleEnterOne}
-              onMouseLeave={handleLeaveOne}
             >
               <CardIconLeft
                 icon={<IcoRocket />}
@@ -80,7 +70,6 @@ const SecProducts = () => {
             <li
               className={`item ${itemTwo ? 'active' : ''}`}
               onMouseEnter={handleEnterTwo}
-              onMouseLeave={handleLeaveTwo}
             >
               <CardIconLeft
                 icon={<IcoCloud />}
@@ -92,7 +81,6 @@ const SecProducts = () => {
             <li
               className={`item ${itemThree ? 'active' : ''}`}
               onMouseEnter={handleEnterThree}
-              onMouseLeave={handleLeaveThree}
             >
               <CardIconLeft
                 icon={<IcoRobot />}
@@ -118,7 +106,7 @@ const SecProducts = () => {
                 </li>
 
                 <li className={`item ${itemFour ? 'active' : ''}`}>
-                  <img src="images/product2.jpg" alt="Foto Cloud" />
+                  <img src="images/product1.jpg" alt="Foto Cloud" />
                 </li>
               </ul>
 
