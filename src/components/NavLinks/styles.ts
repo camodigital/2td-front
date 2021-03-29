@@ -34,6 +34,8 @@ export const NavLink = styled.a`
     text-transform: uppercase;
     color: ${theme.colors.secondary};
 
+    cursor: pointer;
+
     ::after {
       content: '';
       width: 100%;

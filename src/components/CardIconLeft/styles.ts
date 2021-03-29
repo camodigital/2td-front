@@ -16,23 +16,6 @@ export const Wrapper = styled.div`
 
     transition: 0.5s;
 
-    ${media.greaterThan('medium')`
-
-      :hover {
-        border: 0;
-        border-radius: 1rem;
-
-        box-shadow: ${theme.shadows.littleShadow};
-      }
-
-      &.active {
-        border: 0;
-        border-radius: 1rem;
-
-        box-shadow: ${theme.shadows.littleShadow};
-      }
-    `}
-
     ${media.greaterThan('large')`
       border: 0;
     `}

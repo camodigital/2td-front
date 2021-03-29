@@ -43,41 +43,15 @@ export const Content = styled.div`
 
 export const Itens = styled.ul`
   ${({ theme }) => css`
-    list-style: none;
+    ${media.greaterThan('huge')`
+      .item{
+        border-radius: .4rem;
 
-    .item {
-      margin-bottom: ${theme.spacings.medium};
-
-      :last-child {
-        margin-bottom: 0;
+        transition: 0.5s ease-in-out;
+        &.active {
+          box-shadow: ${theme.shadows.littleShadow};
+        }
       }
-    }
-    ${media.greaterThan('large')`
-    list-style: none;
-
-    .item {
-      margin-bottom: 0;
-
-      transition: .5s;
-
-      :last-child {
-        margin-bottom: 0;
-      }
-
-      :hover{
-        border: 0;
-        border-radius: 1rem;
-
-        box-shadow: ${theme.shadows.littleShadow};
-      }
-
-      &.active{
-        border: 0;
-        border-radius: 1rem;
-
-        box-shadow: ${theme.shadows.littleShadow};
-      }
-    }
     `}
   `}
 `
@@ -108,16 +82,28 @@ export const Photo = styled.div`
         left: 50%;
         opacity: 0;
 
+        transition: 1s;
+
         img {
           width: 200%;
 
-          transform: translateX(-50%) translateY(-50%);
-
           display: block;
+
+          transform: translateX(-50%) translateY(-50%) scale(1.5);
+
+          transition: 1s;
         }
 
         &.active {
           opacity: 1;
+
+          img {
+            width: 200%;
+
+            display: block;
+
+            transform: translateX(-50%) translateY(-50%) scale(1);
+          }
         }
       }
     }
@@ -138,24 +124,45 @@ export const Photo = styled.div`
       }
 
       :nth-child(2) {
-        top: 50%;
-        right: 0;
+        top: 0%;
+        left: 10%;
 
         transform: translateX(10%) translateY(-57%);
+
+        transform-origin: 52% 48%;
+
+        animation: rotation 6s infinite linear;
       }
 
       :nth-child(3) {
-        top: 50%;
-        right: 0;
+        top: 0%;
+        right: -5%;
 
         transform: translateX(-10%) translateY(-57%);
+
+        transform-origin: 52% 48%;
+
+        animation: rotation 6s infinite linear;
       }
 
       :nth-child(4) {
-        top: 50%;
-        left: 50%;
+        top: 10%;
+        left: 20%;
 
         transform: translateX(-40%) translateY(-40%);
+
+        transform-origin: 52% 48%;
+
+        animation: rotation 6s infinite linear;
+      }
+    }
+
+    @keyframes rotation {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
       }
     }
   `}
