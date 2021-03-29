@@ -54,7 +54,26 @@ const SecProducts = () => (
         </S.Itens>
 
         <MediaMatch greaterThan="large">
-          <S.Photo>photo</S.Photo>
+          <S.Photo>
+            <ul className="mask">
+              <li className="active">
+                <img src="images/product2.jpg" alt="Foto Observality" />
+              </li>
+
+              <li>
+                <img src="images/product2.jpg" alt="Foto Cloud" />
+              </li>
+
+              <li>
+                <img src="images/product3.jpg" alt="Foto Machine Learning" />
+              </li>
+            </ul>
+
+            <div className="circle"></div>
+            <div className="circle"></div>
+            <div className="circle"></div>
+            <div className="circle"></div>
+          </S.Photo>
         </MediaMatch>
       </S.Content>
     </TheContainer>

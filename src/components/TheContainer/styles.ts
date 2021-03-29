@@ -26,6 +26,10 @@ const wrapperModifiers = {
     padding: ${theme.spacings.medium};
 
     transition: 0.5s ease-in-out;
+
+    ${media.greaterThan('large')`
+      max-width: 117rem;
+    `}
   `,
   right: (theme: DefaultTheme) => css`
     width: 100%;

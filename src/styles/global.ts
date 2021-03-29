@@ -83,16 +83,12 @@ const GlobalStyles = createGlobalStyle`
       background-color: ${theme.colors.bg};
 
       ${media.greaterThan('large')`
-        font-size: ${theme.sizes.medium};
+        font-size: ${theme.sizes.small};
 
         position: relative;
 
         overflow-x: hidden;
       `}
-
-      @media (min-width: 2500px) {
-        font-size: 2rem;
-      }
     }
 
     p {

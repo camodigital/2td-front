@@ -8,13 +8,25 @@ import SecContact from 'sections/SecContact'
 import VideoBgMask from 'components/VideoBgMask'
 
 const TheHome = () => (
-  <S.Wrapper>
-    <SecIntro />
-    <VideoBgMask />
-    <SecProducts />
-    <SecAbout />
-    <SecClients />
-    <SecContact />
+  <S.Wrapper className="page">
+    <section className="section">
+      <SecIntro />
+    </section>
+    <section className="section">
+      <VideoBgMask />
+    </section>
+    <section className="section">
+      <SecProducts />
+    </section>
+    <section className="section">
+      <SecAbout />
+    </section>
+    <section className="section">
+      <SecClients />
+    </section>
+    <section className="section">
+      <SecContact />
+    </section>
   </S.Wrapper>
 )
 
