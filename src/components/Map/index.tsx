@@ -22,7 +22,7 @@ const Map = () => {
   return (
     <MapContainer
       center={[-15.8270416, -47.9556232]}
-      zoom={10}
+      zoom={7}
       scrollWheelZoom={false}
       style={{ height: '100%', width: '100%' }}
     >
@@ -30,7 +30,8 @@ const Map = () => {
 
       <Marker position={[-15.8270416, -47.9556232]}>
         <Popup>
-          A pretty CSS3 popup. <br /> Easily customizable.
+          2TD - ST SGCV Lote 22, Loja 22 - Shopping Casa Park - Guará -
+          Brasília/DF - CEP: 71.215-720
         </Popup>
       </Marker>
     </MapContainer>
