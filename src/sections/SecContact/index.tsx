@@ -6,11 +6,14 @@ import HeadingSubtitle from 'components/HeadingSubtitle'
 import IcoEmail from 'icons/IcoEmail'
 import IcoPhone from 'icons/IcoPhone'
 import MediaMatch from 'components/MediaMatch'
+import Map from 'components/Map'
 
 const SecContact = () => (
   <S.Wrapper>
     <MediaMatch greaterThan="large">
-      <S.Map>map</S.Map>
+      <S.Map>
+        <Map />
+      </S.Map>
     </MediaMatch>
 
     <S.Content>
