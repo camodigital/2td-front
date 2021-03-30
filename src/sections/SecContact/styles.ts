@@ -66,10 +66,17 @@ export const Content = styled.div`
 `
 
 export const Map = styled.div`
+  display: none;
+
   ${({ theme }) => css`
     ${media.greaterThan(`large`)`
       height: 100%;
-      box-shadow: ${theme.shadows.bigShadow};
+
+      display: block;
+
+      position: relative;
+
+      box-shadow: ${theme.shadows.tinyShadow};
     `}
   `}
 `
