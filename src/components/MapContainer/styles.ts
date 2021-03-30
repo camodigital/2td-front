@@ -5,8 +5,4 @@ export const Wrapper = styled.div`
   height: 100%;
 
   background-color: tomato;
-
-  .leaflet-container {
-    height: 100% !important;
-  }
 `
