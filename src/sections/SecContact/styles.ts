@@ -2,10 +2,14 @@ import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
+  padding: 6rem 3rem;
+
   position: relative;
 
   background-color: white;
   ${media.greaterThan(`large`)`
+    padding: 0;
+
     display: grid;
     grid-template-columns: 60% 40%;
     grid-template-rows: 1fr;

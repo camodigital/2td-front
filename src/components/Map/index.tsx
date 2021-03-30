@@ -1,3 +1,3 @@
-const Map = () => <h1>map</h1>
+const Map = () => <span>map</span>
 
 export default Map

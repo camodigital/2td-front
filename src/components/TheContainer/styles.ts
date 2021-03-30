@@ -34,7 +34,7 @@ const wrapperModifiers = {
   right: (theme: DefaultTheme) => css`
     width: 100%;
     margin: 0 0 0 auto;
-    padding-left: ${theme.spacings.medium};
+    padding: ${theme.spacings.medium};
 
     transition: 0.5s ease-in-out;
 
