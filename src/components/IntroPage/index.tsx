@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 import HeadingHero from 'components/HeadingHero'
 import HeadingSubtitle from 'components/HeadingSubtitle'
 import TheContainer from 'components/TheContainer'
@@ -48,11 +50,23 @@ const IntroPage = ({
 
           <S.Photos>
             <div className="photo">
-              <img src={photo1} />
+              <Image
+                src={photo1}
+                width={300}
+                height={500}
+                quality={75}
+                objectFit={'cover'}
+              />
             </div>
 
             <div className="photo">
-              <img src={photo2} />
+              <Image
+                src={photo2}
+                width={300}
+                height={500}
+                quality={75}
+                objectFit={'cover'}
+              />
             </div>
           </S.Photos>
         </S.Box>

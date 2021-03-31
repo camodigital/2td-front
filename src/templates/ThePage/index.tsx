@@ -1,8 +1,9 @@
+import * as S from './styles'
+
 import IntroPage from 'components/IntroPage'
 import ThreeColumns from 'components/ThreeColumns'
 import WhichLanguage from 'components/WhichLanguage'
 import SecContact from 'sections/SecContact'
-import * as S from './styles'
 
 type ThePageProps = {
   title: string

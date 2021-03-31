@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import Image from 'next/image'
+
 import * as S from './styles'
 
 import TheContainer from 'components/TheContainer'
@@ -125,19 +127,51 @@ const SecServices = ({
             <S.Photo>
               <ul className="mask">
                 <li className={`item ${itemOne ? 'active' : ''}`}>
-                  <img src={servicesItemPhoto1} alt={servicesItemTitle1} />
+                  <div className="imgContainer">
+                    <Image
+                      src={servicesItemPhoto1}
+                      alt={servicesItemTitle1}
+                      width={1000}
+                      height={1000}
+                      quality={75}
+                    />
+                  </div>
                 </li>
 
                 <li className={`item ${itemTwo ? 'active' : ''}`}>
-                  <img src={servicesItemPhoto2} alt={servicesItemTitle1} />
+                  <div className="imgContainer">
+                    <Image
+                      src={servicesItemPhoto2}
+                      alt={servicesItemTitle1}
+                      width={1000}
+                      height={1000}
+                      quality={75}
+                    />
+                  </div>
                 </li>
 
                 <li className={`item ${itemThree ? 'active' : ''}`}>
-                  <img src={servicesItemPhoto3} alt={servicesItemTitle2} />
+                  <div className="imgContainer">
+                    <Image
+                      src={servicesItemPhoto3}
+                      alt={servicesItemTitle2}
+                      width={1000}
+                      height={1000}
+                      quality={75}
+                    />
+                  </div>
                 </li>
 
                 <li className={`item ${itemFour ? 'active' : ''}`}>
-                  <img src={servicesItemPhoto1} alt={servicesItemTitle3} />
+                  <div className="imgContainer">
+                    <Image
+                      src={servicesItemPhoto1}
+                      alt={servicesItemTitle3}
+                      width={1000}
+                      height={1000}
+                      quality={75}
+                    />
+                  </div>
                 </li>
               </ul>
 

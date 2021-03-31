@@ -71,41 +71,28 @@ export const Photo = styled.div`
       height: 50rem;
 
       position: relative;
-      z-index: 1;
-
-      overflow: hidden;
+      z-index: 2;
 
       border: 0.5rem solid ${theme.colors.primary};
       border-radius: 50%;
 
-      li {
+      overflow: hidden;
+
+      .item {
         position: absolute;
-        top: 50%;
-        left: 50%;
+        top: 0;
+        left: 0;
+
+        transform: scale(1.4);
+
         opacity: 0;
 
-        transition: 1s;
-
-        img {
-          width: 200%;
-
-          display: block;
-
-          transform: translateX(-50%) translateY(-50%) scale(1.5);
-
-          transition: 1s;
-        }
+        transition: 1s ease-in-out;
 
         &.active {
+          transform: scale(1);
+
           opacity: 1;
-
-          img {
-            width: 200%;
-
-            display: block;
-
-            transform: translateX(-50%) translateY(-50%) scale(1);
-          }
         }
       }
     }
