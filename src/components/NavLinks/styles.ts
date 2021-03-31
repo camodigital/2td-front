@@ -17,7 +17,7 @@ export const NavItem = styled.li`
     text-align: center;
 
     ${media.greaterThan('large')`
-      margin: ${theme.sizes.xsmall};
+      margin: ${theme.sizes.xsmall} ${theme.sizes.large};
 
       display: inline-block;
     `}
@@ -60,6 +60,10 @@ export const NavLink = styled.a`
 
     ${media.greaterThan('large')`
       font-size: ${theme.sizes.small};
+
+      ::after {
+        height: 0.2rem;
+      }
     `}
   `}
 `

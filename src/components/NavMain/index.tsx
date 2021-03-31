@@ -2,14 +2,18 @@ import { useState } from 'react'
 
 import * as S from './styles'
 
-import ButtonGeral from 'components/ButtonGeral'
 import LogoGeral from 'components/LogoGeral'
 import MediaMatch from 'components/MediaMatch'
 import NavLinks from 'components/NavLinks'
 import SocialLinks from 'components/SocialLinks'
 import TheContainer from 'components/TheContainer'
+import ButtonMenu from 'components/ButtonMenu'
 
-const NavMain = () => {
+export type NavMainProps = {
+  color: 'primary' | 'secondary'
+}
+
+const NavMain = ({ color }: NavMainProps) => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
@@ -39,14 +43,12 @@ const NavMain = () => {
                 <NavLinks />
               </S.NavFullLinks>
 
-              <S.NavFullSocial>
-                <SocialLinks />
-              </S.NavFullSocial>
+              <S.NavFullSocial></S.NavFullSocial>
 
               <S.NavFullButton
                 onClick={() => (isOpen ? setIsOpen(false) : setIsOpen(true))}
               >
-                <ButtonGeral>contato</ButtonGeral>
+                <ButtonMenu color={color} />
               </S.NavFullButton>
             </S.NavFullContainer>
           </S.NavFull>
@@ -61,11 +63,11 @@ const NavMain = () => {
               </S.NavLinks>
 
               <S.NavSocial>
-                <SocialLinks />
+                <SocialLinks colorIcon={color} />
               </S.NavSocial>
 
               <S.NavButton>
-                <ButtonGeral>contato</ButtonGeral>
+                <ButtonMenu color={color} />
               </S.NavButton>
             </S.NavContainer>
           </S.Nav>

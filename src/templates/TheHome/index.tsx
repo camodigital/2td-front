@@ -8,6 +8,7 @@ import SecContact from 'sections/SecContact'
 import VideoBgMask from 'components/VideoBgMask'
 
 export type TheHomeProps = {
+  // intro
   introPretitle: string
   introTitle: string
   introText: string

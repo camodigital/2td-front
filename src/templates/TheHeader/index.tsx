@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react'
 
 import * as S from './styles'
 
-import NavMain from 'components/NavMain'
+import NavMain, { NavMainProps } from 'components/NavMain'
 
-const TheHeader = () => {
+const TheHeader = ({ color }: NavMainProps) => {
   const [scrolling, setScrolling] = useState(false)
 
   useEffect(() => {
@@ -26,7 +26,7 @@ const TheHeader = () => {
 
   return (
     <S.Wrapper className={scrolling ? 'scrolling' : ''}>
-      <NavMain />
+      <NavMain color={color} />
     </S.Wrapper>
   )
 }

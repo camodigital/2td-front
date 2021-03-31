@@ -8,6 +8,8 @@ export const Wrapper = styled.div<LogoProps>`
       path {
         :nth-child(1) {
           fill: ${theme.colors[color1!]};
+
+          transition: 0.5s;
         }
         :nth-child(2) {
           fill: ${theme.colors[color2!]};
@@ -19,10 +21,7 @@ export const Wrapper = styled.div<LogoProps>`
       svg {
         path {
           :nth-child(1) {
-            fill: ${theme.colors[color2!]};
-          }
-          :nth-child(2) {
-            fill: ${theme.colors[color1!]};
+            fill: ${theme.colors.sucess};
           }
         }
       }

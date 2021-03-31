@@ -7,10 +7,12 @@ export type LogoProps = {
   color2?: 'secondary' | 'dark' | 'light'
 }
 
-const LogoGeral = ({ color1 = 'primary', color2 = 'secondary' }: LogoProps) => (
-  <S.Wrapper color1={color1} color2={color2}>
-    <Logo2TD />
-  </S.Wrapper>
-)
+const LogoGeral = ({ color1 = 'primary', color2 = 'secondary' }: LogoProps) => {
+  return (
+    <S.Wrapper color1={color1} color2={color2}>
+      <Logo2TD />
+    </S.Wrapper>
+  )
+}
 
 export default LogoGeral

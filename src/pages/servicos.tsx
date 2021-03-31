@@ -21,7 +21,7 @@ export default function PageServicos({
 }: PageServicosProps) {
   return (
     <>
-      <TheHeader />
+      <TheHeader color="secondary" />
       <ThePage
         title={titleIntro}
         subtitle={subtitleIntro}

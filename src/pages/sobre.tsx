@@ -21,7 +21,7 @@ export default function PageSobre({
 }: PageSobreProps) {
   return (
     <>
-      <TheHeader />
+      <TheHeader color="secondary" />
       <ThePage
         title={titleIntro}
         subtitle={subtitleIntro}

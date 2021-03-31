@@ -5,6 +5,7 @@ import client from 'graphql/client'
 import { GET_HOME } from 'graphql/queries'
 
 export default function Home({
+  // intro
   introPretitle,
   introTitle,
   introText,
@@ -34,7 +35,7 @@ export default function Home({
 }: TheHomeProps) {
   return (
     <>
-      <TheHeader />
+      <TheHeader color="primary" />
       <TheHome
         introPretitle={introPretitle}
         introTitle={introTitle}
@@ -87,6 +88,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
+      // intro
       introPretitle: introPreTitulo,
       introTitle: introTitulo.html,
       introText: introTexto.html,

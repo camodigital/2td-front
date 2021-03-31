@@ -181,7 +181,7 @@ export const NavContainer = styled.nav`
   width: 100%;
 
   display: grid;
-  grid-template-columns: 1fr 11rem 11rem;
+  grid-template-columns: 1fr 14rem 11rem;
   grid-template-rows: 1fr;
 `
 

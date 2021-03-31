@@ -1,19 +1,26 @@
+import IcoInstagram from 'icons/IcoInstagram'
+import IcoLinkedin from 'icons/IcoLinkedin'
 import * as S from './styles'
 
-import IcoLinkedin from 'icons/IcoLinkedin'
-import IcoInstagram from 'icons/IcoInstagram'
+export type SocialLinksProps = {
+  colorIcon: 'primary' | 'secondary'
+}
 
-const SocialLinks = () => (
+const SocialLinks = ({ colorIcon }: SocialLinksProps) => (
   <S.Wrapper className="social-links">
     <S.SocialItem>
-      <S.SocialLink>
-        <IcoLinkedin aria-label="Nosso Linkedin" />
+      <S.SocialLink href="" title="Instagram 2TD">
+        <S.SocialIcon colorIcon={colorIcon}>
+          <IcoInstagram />
+        </S.SocialIcon>
       </S.SocialLink>
     </S.SocialItem>
 
     <S.SocialItem>
-      <S.SocialLink>
-        <IcoInstagram aria-label="Abrir Instragram" />
+      <S.SocialLink href="" title="Linkedin 2TD">
+        <S.SocialIcon colorIcon={colorIcon}>
+          <IcoLinkedin />
+        </S.SocialIcon>
       </S.SocialLink>
     </S.SocialItem>
   </S.Wrapper>

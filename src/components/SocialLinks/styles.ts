@@ -1,44 +1,23 @@
 import styled, { css } from 'styled-components'
-import media from 'styled-media-query'
+import { SocialLinksProps } from '.'
 
 export const Wrapper = styled.ul``
 
 export const SocialItem = styled.li`
-  ${({ theme }) => css`
-    min-width: ${theme.sizes.xlarge};
-    margin: 0 ${theme.spacings.tiny};
+  padding: 1rem;
 
-    display: inline-block;
-
-    ${media.greaterThan('medium')`
-      min-width: ${theme.sizes.large};
-    `}
-
-    ${media.greaterThan('large')`
-      width: 2rem;
-    `}
-  `}
+  display: inline-block;
 `
 
-export const SocialLink = styled.a`
-  ${({ theme }) => css`
-    display: block;
+export const SocialLink = styled.a``
 
-    cursor: pointer;
-
+export const SocialIcon = styled.div<SocialLinksProps>`
+  ${({ theme, colorIcon }) => css`
     svg {
+      width: 3rem;
+      height: 3rem;
       path {
-        fill: ${theme.colors.secondary};
-
-        transition: 0.5s ease-in-out;
-
-        :hover {
-          fill: ${theme.colors.primary};
-        }
-
-        @media (min-width: 1550px) {
-          fill: ${theme.colors.bg};
-        }
+        fill: ${theme.colors[colorIcon]};
       }
     }
   `}

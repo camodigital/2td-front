@@ -19,14 +19,6 @@ export const Wrapper = styled.header`
         padding-top: 0;
         padding-bottom: 0;
       }
-
-      .social-links {
-        svg {
-          path {
-            fill: ${theme.colors.secondary};
-          }
-        }
-      }
     }
   `}
 `
