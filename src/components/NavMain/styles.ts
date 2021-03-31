@@ -64,7 +64,7 @@ export const NavFullControl = styled.div`
     &.openedMenu {
       div {
         width: 100%;
-        height: ${theme.sizes.xxxsmall};
+        height: 0.2rem;
 
         background-color: ${theme.colors.secondary};
 
@@ -127,7 +127,7 @@ export const NavFullContainer = styled.div<NavFullContainerProps>`
   ${({ theme, isOpen }) => css`
     width: 100%;
     height: 100vh;
-    padding: ${theme.spacings.xxxlarge} 0;
+    padding: 6rem 0 15rem;
 
     position: absolute;
     top: 0;

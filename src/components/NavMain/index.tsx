@@ -43,7 +43,9 @@ const NavMain = () => {
                 <SocialLinks />
               </S.NavFullSocial>
 
-              <S.NavFullButton>
+              <S.NavFullButton
+                onClick={() => (isOpen ? setIsOpen(false) : setIsOpen(true))}
+              >
                 <ButtonGeral>contato</ButtonGeral>
               </S.NavFullButton>
             </S.NavFullContainer>

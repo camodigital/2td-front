@@ -19,9 +19,11 @@ const VideoBgMask = () => {
         <S.Video>
           <S.Box>
             <S.Content>
-              <video autoPlay loop muted poster={posterUrl}>
-                <source src={videoUrl} />
-              </video>
+              {videoUrl !== '' && (
+                <video autoPlay loop muted poster={posterUrl}>
+                  <source src={videoUrl} />
+                </video>
+              )}
             </S.Content>
           </S.Box>
         </S.Video>
