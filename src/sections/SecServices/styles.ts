@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
 
     background-color: ${theme.colors.bg};
 
-    ${media.greaterThan('huge')`
+    ${media.greaterThan('large')`
       padding: 10rem 0;
 
       background-color: transparent;
@@ -45,7 +45,7 @@ export const Content = styled.div`
 
 export const Itens = styled.ul`
   ${({ theme }) => css`
-    ${media.greaterThan('huge')`
+    ${media.greaterThan('large')`
       .item{
         border-radius: .4rem;
 

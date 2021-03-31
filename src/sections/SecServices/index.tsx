@@ -6,11 +6,40 @@ import HeadingSection from 'components/HeadingSection'
 import HeadingSubtitle from 'components/HeadingSubtitle'
 import MediaMatch from 'components/MediaMatch'
 import CardIconLeft from 'components/CardIconLeft'
-import IcoRocket from 'icons/IcoRocket'
-import IcoCloud from 'icons/IcoCloud'
-import IcoRobot from 'icons/IcoRobot'
 
-const SecProducts = () => {
+type SecServicesProps = {
+  servicesTitle: string
+  servicesSubtitle: string
+  servicesItemIcon1: string
+  servicesItemTitle1: string
+  servicesItemText1: string
+  servicesItemPhoto1: string
+  servicesItemIcon2: string
+  servicesItemTitle2: string
+  servicesItemText2: string
+  servicesItemPhoto2: string
+  servicesItemIcon3: string
+  servicesItemTitle3: string
+  servicesItemText3: string
+  servicesItemPhoto3: string
+}
+
+const SecServices = ({
+  servicesTitle,
+  servicesSubtitle,
+  servicesItemIcon1,
+  servicesItemTitle1,
+  servicesItemText1,
+  servicesItemPhoto1,
+  servicesItemIcon2,
+  servicesItemTitle2,
+  servicesItemText2,
+  servicesItemPhoto2,
+  servicesItemIcon3,
+  servicesItemTitle3,
+  servicesItemText3,
+  servicesItemPhoto3
+}: SecServicesProps) => {
   const [itemOne, setItemOne] = useState(true)
   const [itemTwo, setItemTwo] = useState(false)
   const [itemThree, setItemThree] = useState(false)
@@ -43,13 +72,15 @@ const SecProducts = () => {
         <S.Header>
           <S.Title>
             <HeadingSection>
-              Nossos <strong>Serviços</strong>
+              <span dangerouslySetInnerHTML={{ __html: servicesTitle }}></span>
             </HeadingSection>
           </S.Title>
 
           <S.Subtitle>
             <HeadingSubtitle>
-              Transformamos o futuro com tecnologia e valores.
+              <span
+                dangerouslySetInnerHTML={{ __html: servicesSubtitle }}
+              ></span>
             </HeadingSubtitle>
           </S.Subtitle>
         </S.Header>
@@ -61,9 +92,9 @@ const SecProducts = () => {
               onMouseEnter={handleEnterOne}
             >
               <CardIconLeft
-                icon={<IcoRocket />}
-                title="Observality"
-                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet facilisis odio. Integer sollicitudin, nisl mattis congue "
+                icon={servicesItemIcon1}
+                title={servicesItemTitle1}
+                text={servicesItemText1}
               ></CardIconLeft>
             </li>
 
@@ -72,9 +103,9 @@ const SecProducts = () => {
               onMouseEnter={handleEnterTwo}
             >
               <CardIconLeft
-                icon={<IcoCloud />}
-                title="Cloud"
-                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet facilisis odio. Integer sollicitudin, nisl mattis congue "
+                icon={servicesItemIcon2}
+                title={servicesItemTitle2}
+                text={servicesItemText2}
               ></CardIconLeft>
             </li>
 
@@ -83,9 +114,9 @@ const SecProducts = () => {
               onMouseEnter={handleEnterThree}
             >
               <CardIconLeft
-                icon={<IcoRobot />}
-                title="Machine Learning"
-                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet facilisis odio. Integer sollicitudin, nisl mattis congue "
+                icon={servicesItemIcon3}
+                title={servicesItemTitle3}
+                text={servicesItemText3}
               ></CardIconLeft>
             </li>
           </S.Itens>
@@ -94,19 +125,19 @@ const SecProducts = () => {
             <S.Photo>
               <ul className="mask">
                 <li className={`item ${itemOne ? 'active' : ''}`}>
-                  <img src="images/product1.jpg" alt="Foto Observality" />
+                  <img src={servicesItemPhoto1} alt={servicesItemTitle1} />
                 </li>
 
                 <li className={`item ${itemTwo ? 'active' : ''}`}>
-                  <img src="images/product2.jpg" alt="Foto Cloud" />
+                  <img src={servicesItemPhoto2} alt={servicesItemTitle1} />
                 </li>
 
                 <li className={`item ${itemThree ? 'active' : ''}`}>
-                  <img src="images/product3.jpg" alt="Foto Machine Learning" />
+                  <img src={servicesItemPhoto3} alt={servicesItemTitle2} />
                 </li>
 
                 <li className={`item ${itemFour ? 'active' : ''}`}>
-                  <img src="images/product1.jpg" alt="Foto Cloud" />
+                  <img src={servicesItemPhoto1} alt={servicesItemTitle3} />
                 </li>
               </ul>
 
@@ -122,4 +153,4 @@ const SecProducts = () => {
   )
 }
 
-export default SecProducts
+export default SecServices

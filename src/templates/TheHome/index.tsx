@@ -1,16 +1,80 @@
 import * as S from './styles'
 
 import SecIntro from 'sections/SecIntro'
-import SecProducts from 'sections/SecProducts'
+import SecServices from 'sections/SecServices'
 import SecAbout from 'sections/SecAbout'
 import SecClients from 'sections/SecClients'
 import SecContact from 'sections/SecContact'
 import VideoBgMask from 'components/VideoBgMask'
 
-const TheHome = () => (
+export type TheHomeProps = {
+  introPretitle: string
+  introTitle: string
+  introText: string
+  // services
+  servicesTitle: string
+  servicesSubtitle: string
+  servicesItemIcon1: string
+  servicesItemTitle1: string
+  servicesItemText1: string
+  servicesItemPhoto1: string
+  servicesItemIcon2: string
+  servicesItemTitle2: string
+  servicesItemText2: string
+  servicesItemPhoto2: string
+  servicesItemIcon3: string
+  servicesItemTitle3: string
+  servicesItemText3: string
+  servicesItemPhoto3: string
+  // about
+  aboutTitle: string
+  aboutText: string
+  aboutPartnerships: [{ url: string }]
+  // clients
+  clientsTitle: string
+  clientsSubtitle: string
+  clientsTestimony: [
+    { titulo: string; texto: { html: string }; nome: string; cargo: string }
+  ]
+  clientsLogos: [{ url: string }]
+}
+
+const TheHome = ({
+  introPretitle,
+  introTitle,
+  introText,
+  // services
+  servicesTitle,
+  servicesSubtitle,
+  servicesItemIcon1,
+  servicesItemTitle1,
+  servicesItemText1,
+  servicesItemPhoto1,
+  servicesItemIcon2,
+  servicesItemTitle2,
+  servicesItemText2,
+  servicesItemPhoto2,
+  servicesItemIcon3,
+  servicesItemTitle3,
+  servicesItemText3,
+  servicesItemPhoto3,
+  // about
+  aboutTitle,
+  aboutText,
+  aboutPartnerships,
+  // clients
+  clientsTitle,
+  clientsSubtitle,
+  clientsTestimony,
+  clientsLogos
+}: TheHomeProps) => (
   <S.Wrapper className="page">
     <section className="section">
-      <SecIntro />
+      <SecIntro
+        introPretitle={introPretitle}
+        introTitle={introTitle}
+        IntroText={introText}
+      />
     </section>
 
     <section className="section">
@@ -18,15 +82,39 @@ const TheHome = () => (
     </section>
 
     <section className="section" id="servicos">
-      <SecProducts />
+      <SecServices
+        servicesTitle={servicesTitle}
+        servicesSubtitle={servicesSubtitle}
+        servicesItemIcon1={servicesItemIcon1}
+        servicesItemTitle1={servicesItemTitle1}
+        servicesItemText1={servicesItemText1}
+        servicesItemPhoto1={servicesItemPhoto1}
+        servicesItemIcon2={servicesItemIcon2}
+        servicesItemTitle2={servicesItemTitle2}
+        servicesItemText2={servicesItemText2}
+        servicesItemPhoto2={servicesItemPhoto2}
+        servicesItemIcon3={servicesItemIcon3}
+        servicesItemTitle3={servicesItemTitle3}
+        servicesItemText3={servicesItemText3}
+        servicesItemPhoto3={servicesItemPhoto3}
+      />
     </section>
 
     <section className="section section-about">
-      <SecAbout />
+      <SecAbout
+        aboutTitle={aboutTitle}
+        aboutText={aboutText}
+        aboutPartnerships={aboutPartnerships}
+      />
     </section>
 
     <section className="section">
-      <SecClients />
+      <SecClients
+        clientsTitle={clientsTitle}
+        clientsSubtitle={clientsSubtitle}
+        clientsTestimony={clientsTestimony}
+        clientsLogos={clientsLogos}
+      />
     </section>
 
     <section className="section">

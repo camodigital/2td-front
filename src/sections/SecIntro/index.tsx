@@ -5,11 +5,21 @@ import HeroHome from 'components/HeroHome'
 import VideoBg from 'components/VideoBg'
 import IcoArrowDown from 'icons/IcoArrowDown'
 
-const SecIntro = () => (
+export type SecIntroProps = {
+  introPretitle: string
+  introTitle: string
+  IntroText: string
+}
+
+const SecIntro = ({ introPretitle, introTitle, IntroText }: SecIntroProps) => (
   <S.Wrapper>
     <TheContainer size="right">
       <S.Hero>
-        <HeroHome />
+        <HeroHome
+          pretitle={introPretitle}
+          title={introTitle}
+          text={IntroText}
+        />
       </S.Hero>
       <S.Video>
         <VideoBg />

@@ -1,31 +1,38 @@
+import Link from 'next/link'
+
 import * as S from './styles'
 
 import HeadingArea from 'components/HeadingArea'
 import HeadingHero from 'components/HeadingHero'
 import ButtonGeral from 'components/ButtonGeral'
 
-const HeroHome = () => (
+type HeroHomeProps = {
+  pretitle: string
+  title: string
+  text: string
+}
+
+const HeroHome = ({ pretitle, title, text }: HeroHomeProps) => (
   <S.Wrapper>
     <S.PreTitle>
-      <HeadingArea>Bem vindo a 2TD</HeadingArea>
+      <HeadingArea>{pretitle}</HeadingArea>
     </S.PreTitle>
 
     <S.Title>
       <HeadingHero>
-        <strong>Promovemos</strong> Tecnologia <br />e Transformação Digital
+        <span dangerouslySetInnerHTML={{ __html: title }}></span>
       </HeadingHero>
     </S.Title>
 
     <S.Text>
-      <p>
-        Somos especialistas em observability e oferecemos monitoramento
-        inteligente de aplicações para agregar valor ao negócio do cliente.
-      </p>
+      <span dangerouslySetInnerHTML={{ __html: text }}></span>
     </S.Text>
 
-    <S.Button>
-      <ButtonGeral>Sobre</ButtonGeral>
-    </S.Button>
+    <Link href="/sobre">
+      <S.Button>
+        <ButtonGeral>Sobre</ButtonGeral>
+      </S.Button>
+    </Link>
   </S.Wrapper>
 )
 

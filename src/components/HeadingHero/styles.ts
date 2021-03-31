@@ -15,6 +15,10 @@ export const Wrapper = styled.h1`
       color: ${theme.colors.primary};
     }
 
+    p {
+      margin: 0;
+    }
+
     ${media.greaterThan('medium')`
       font-size: ${theme.sizes.xxlarge};
     `}

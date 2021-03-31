@@ -1,12 +1,25 @@
+import Link from 'next/link'
+
+import * as S from './styles'
+
 import ButtonGeral from 'components/ButtonGeral'
 import HeadingArea from 'components/HeadingArea'
 import HeadingSection from 'components/HeadingSection'
 import MediaMatch from 'components/MediaMatch'
 import TheContainer from 'components/TheContainer'
 import BGVerde from 'icons/BGVerde'
-import * as S from './styles'
 
-const SecAbout = () => (
+type SecAboutProps = {
+  aboutTitle: string
+  aboutText: string
+  aboutPartnerships: [{ url: string }]
+}
+
+const SecAbout = ({
+  aboutTitle,
+  aboutText,
+  aboutPartnerships
+}: SecAboutProps) => (
   <S.Wrapper>
     <S.BGVerde>
       <BGVerde />
@@ -22,49 +35,39 @@ const SecAbout = () => (
       <S.Box>
         <S.Header>
           <HeadingSection>
-            A melhor Equipe da <br />
-            <strong>América Latina</strong>
+            <span dangerouslySetInnerHTML={{ __html: aboutTitle }} />
           </HeadingSection>
         </S.Header>
 
         <S.Content>
           <S.Text>
-            <p>
-              Equipe 100% certificada Dynatrace Associate + Três primeiros
-              especialistas com certificação Dynatrace Professional LATAM
-            </p>
-            <p>
-              Com a aplicação de observability, conseguimos atuar na causa raiz
-              do problema. A 2TD é expert em investigar, identificar alertas,
-              monitorar, descobrir, analisar e entender o problema para propor
-              soluções. O método de trabalho da 2TD concilia as melhoras
-              práticas de PDCA, LeanIT e metodologias ágeis.
-            </p>
+            <div dangerouslySetInnerHTML={{ __html: aboutText }} />
           </S.Text>
 
           <S.Partnerships>
-            <div className="title">
-              <HeadingArea>Parcerias:</HeadingArea>
-            </div>
+            {aboutPartnerships && (
+              <div className="title">
+                <HeadingArea>Parcerias:</HeadingArea>
+              </div>
+            )}
 
             <ul className="itens">
-              <li>
-                <img src="images/logoDynatrace.svg" alt="Dynatrace" />
-              </li>
-
-              <li>
-                <img src="images/logoAws.svg" alt="AWS" />
-              </li>
-
-              <li>
-                <img src="images/logoAzure.svg" alt="Azure" />
-              </li>
+              {aboutPartnerships &&
+                aboutPartnerships.map((item, i) => {
+                  return (
+                    <li key={i}>
+                      <img src={item.url} alt="Logo Parceiro" />
+                    </li>
+                  )
+                })}
             </ul>
           </S.Partnerships>
 
-          <S.Button>
-            <ButtonGeral>Saiba Mais</ButtonGeral>
-          </S.Button>
+          <Link href="/sobre">
+            <S.Button>
+              <ButtonGeral>Saiba Mais</ButtonGeral>
+            </S.Button>
+          </Link>
         </S.Content>
       </S.Box>
     </TheContainer>

@@ -64,12 +64,18 @@ export const Content = styled.div`
     background: rgba(250, 250, 250, 0.9);
 
     ${media.greaterThan('large')`
+      padding: 0;
+
       background: transparent;
     `}
   `}
 `
 
-export const Text = styled.div``
+export const Text = styled.div`
+  p {
+    margin-bottom: 3rem;
+  }
+`
 
 export const Partnerships = styled.div`
   ${({ theme }) => css`

@@ -69,6 +69,10 @@ const GlobalStyles = createGlobalStyle`
     height: 100%;
   }
 
+  p.text {
+    padding-bottom: 2.5rem;
+  }
+
   ${({ theme }) => css`
     html {
       font-size: 62.5%;
@@ -89,14 +93,6 @@ const GlobalStyles = createGlobalStyle`
 
         overflow-x: hidden;
       `}
-    }
-
-    p {
-      padding-bottom: ${theme.spacings.small};
-
-      :last-child {
-        margin-bottom: 0;
-      }
     }
   `}
 `
