@@ -41,8 +41,10 @@ export const Infos = styled.div`
   }
 
   ${media.greaterThan(`medium`)`
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
 
     .item{
       width: 50%;

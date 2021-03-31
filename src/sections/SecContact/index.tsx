@@ -9,7 +9,7 @@ import MapContainer from 'components/MapContainer'
 
 const SecContact = () => {
   return (
-    <S.Wrapper>
+    <S.Wrapper id="contato">
       <S.Map>
         <MapContainer />
       </S.Map>

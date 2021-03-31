@@ -53,7 +53,11 @@ export const Header = styled.div`
   margin-bottom: 3rem;
 `
 
-export const Title = styled.div``
+export const Title = styled.div`
+  p {
+    margin-bottom: 3rem;
+  }
+`
 
 export const Subtitle = styled.div``
 

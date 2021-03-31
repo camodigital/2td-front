@@ -22,6 +22,10 @@ export const Wrapper = styled.div`
       }
     }
 
+    p {
+      margin-bottom: 3rem;
+    }
+
     ${media.greaterThan('large')`
       .theContainer {
         display: grid;

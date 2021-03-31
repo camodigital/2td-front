@@ -58,3 +58,55 @@ export const GET_HOME = gql`
     }
   }
 `
+
+export const GET_SOBRE = gql`
+  query getSobre {
+    paginasSobre {
+      tituloIntro {
+        html
+      }
+      subtituloIntro {
+        html
+      }
+      textoIntro {
+        html
+      }
+      fotoIntro1 {
+        url
+      }
+      fotoIntro2 {
+        url
+      }
+      tituloPorQueA2Td
+      textoPorQueA2Td {
+        html
+      }
+      tituloResultado
+      textoResultado {
+        html
+      }
+    }
+  }
+`
+
+export const GET_SERVICOS = gql`
+  query getServicos {
+    paginasServico {
+      tituloIntro {
+        html
+      }
+      subTituloIntro {
+        html
+      }
+      textoIntro {
+        html
+      }
+      fotoIntro1 {
+        url
+      }
+      fotoIntro2 {
+        url
+      }
+    }
+  }
+`

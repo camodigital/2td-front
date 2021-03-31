@@ -1,20 +1,33 @@
 import TheHeader from 'templates/TheHeader'
 import TheFooter from 'templates/TheFooter'
 import ThePage from 'templates/ThePage'
+import client from 'graphql/client'
+import { GET_SOBRE } from 'graphql/queries'
 
-export default function Page() {
+type PageSobreProps = {
+  titleIntro: string
+  subtitleIntro: string
+  textIntro: string
+  photoIntro1: string
+  photoIntro2: string
+}
+
+export default function PageSobre({
+  titleIntro,
+  subtitleIntro,
+  textIntro,
+  photoIntro1,
+  photoIntro2
+}: PageSobreProps) {
   return (
     <>
       <TheHeader />
       <ThePage
-        title="Sobre a 2TD"
-        subtitle="Comunicação que flui
-        "
-        text="Acreditamos que comunicação é tudo e só dá certo se as equipes falam a mesma língua.
-
-        A experiência da equipe 2TD em arquitetura, infraestrutura, banco de dados, desenvolvimento e análise vão proporcionar uma interação fácil, rápida e descomplicada com os profissionais de TI de sua empresa."
-        photo1="images/product1.jpg"
-        photo2="images/product2.jpg"
+        title={titleIntro}
+        subtitle={subtitleIntro}
+        text={textIntro}
+        photo1={photoIntro1}
+        photo2={photoIntro2}
         titleCol1="Por que a 2TD?"
         textCol1="Se a sua empresa não consegue evoluir por que a equipe vive “apagando incêndio” e essa rotina absorve quase 100% do tempo dos gestores e dos técnicos, a 2TD pode (mesmo!) te ajudar.
 
@@ -29,4 +42,26 @@ export default function Page() {
       <TheFooter />
     </>
   )
+}
+
+export const getStaticProps = async () => {
+  const { paginasSobre } = await client.request(GET_SOBRE)
+
+  const {
+    tituloIntro,
+    subtituloIntro,
+    textoIntro,
+    fotoIntro1,
+    fotoIntro2
+  } = paginasSobre[0]
+
+  return {
+    props: {
+      titleIntro: tituloIntro.html,
+      subtitleIntro: subtituloIntro.html,
+      textIntro: textoIntro.html,
+      photoIntro1: fotoIntro1.url,
+      photoIntro2: fotoIntro2.url
+    }
+  }
 }

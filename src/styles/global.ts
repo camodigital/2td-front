@@ -73,6 +73,8 @@ const GlobalStyles = createGlobalStyle`
     padding-bottom: 2.5rem;
   }
 
+  a{ text-decoration: none}
+
   ${({ theme }) => css`
     html {
       font-size: 62.5%;

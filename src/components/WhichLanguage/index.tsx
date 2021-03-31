@@ -4,7 +4,7 @@ import * as S from './styles'
 
 const WhichLanguage = () => (
   <S.Wrapper>
-    <TheContainer>
+    <TheContainer size="medium">
       <S.Title>
         <HeadingArea>
           Que língua seu negócio fala? Nós falamos também.

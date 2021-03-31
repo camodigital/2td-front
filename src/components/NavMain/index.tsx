@@ -61,7 +61,9 @@ const NavMain = () => {
               </S.NavSocial>
 
               <S.NavButton>
-                <ButtonGeral>contato</ButtonGeral>
+                <a href="#contato">
+                  <ButtonGeral>contato</ButtonGeral>
+                </a>
               </S.NavButton>
             </S.NavContainer>
           </S.Nav>

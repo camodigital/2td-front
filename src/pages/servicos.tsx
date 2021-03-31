@@ -1,17 +1,33 @@
 import TheHeader from 'templates/TheHeader'
 import TheFooter from 'templates/TheFooter'
 import ThePage from 'templates/ThePage'
+import client from 'graphql/client'
+import { GET_SERVICOS } from 'graphql/queries'
 
-export default function Page() {
+type PageServicosProps = {
+  titleIntro: string
+  subtitleIntro: string
+  textIntro: string
+  photoIntro1: string
+  photoIntro2: string
+}
+
+export default function PageServicos({
+  titleIntro,
+  subtitleIntro,
+  textIntro,
+  photoIntro1,
+  photoIntro2
+}: PageServicosProps) {
   return (
     <>
       <TheHeader />
       <ThePage
-        title="Nossos Serviços"
-        subtitle="Transformar o futuro com tecnologia e valores."
-        text="Somos especialistas em observability e oferecemos monitoramento inteligente de aplicações para agregar valor ao negócio do cliente."
-        photo1="images/product1.jpg"
-        photo2="images/product2.jpg"
+        title={titleIntro}
+        subtitle={subtitleIntro}
+        text={textIntro}
+        photo1={photoIntro1}
+        photo2={photoIntro2}
         titleCol1="Observality"
         textCol1="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet facilisis odio. Integer sollicitudin, nisl mattis congue "
         titleCol2="Cloud"
@@ -22,4 +38,26 @@ export default function Page() {
       <TheFooter />
     </>
   )
+}
+
+export const getStaticProps = async () => {
+  const { paginasServico } = await client.request(GET_SERVICOS)
+
+  const {
+    tituloIntro,
+    subTituloIntro,
+    textoIntro,
+    fotoIntro1,
+    fotoIntro2
+  } = paginasServico[0]
+
+  return {
+    props: {
+      titleIntro: tituloIntro.html,
+      subtitleIntro: subTituloIntro.html,
+      textIntro: textoIntro.html,
+      photoIntro1: fotoIntro1.url,
+      photoIntro2: fotoIntro2.url
+    }
+  }
 }

@@ -29,15 +29,21 @@ const IntroPage = ({
           <S.Content>
             <S.Header>
               <S.Title>
-                <HeadingHero>{title}</HeadingHero>
+                <HeadingHero>
+                  <span dangerouslySetInnerHTML={{ __html: title }} />
+                </HeadingHero>
               </S.Title>
 
               <S.Subtitle>
-                <HeadingSubtitle>{subtitle}</HeadingSubtitle>
+                <HeadingSubtitle>
+                  <span dangerouslySetInnerHTML={{ __html: subtitle }} />
+                </HeadingSubtitle>
               </S.Subtitle>
             </S.Header>
 
-            <S.Text>{text}</S.Text>
+            <S.Text>
+              <span dangerouslySetInnerHTML={{ __html: text }} />
+            </S.Text>
           </S.Content>
 
           <S.Photos>
