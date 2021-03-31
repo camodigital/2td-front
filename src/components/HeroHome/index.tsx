@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 import * as S from './styles'
 
 import HeadingArea from 'components/HeadingArea'
@@ -28,11 +26,9 @@ const HeroHome = ({ pretitle, title, text }: HeroHomeProps) => (
       <span dangerouslySetInnerHTML={{ __html: text }}></span>
     </S.Text>
 
-    <Link href="/sobre">
-      <S.Button>
-        <ButtonGeral>Sobre</ButtonGeral>
-      </S.Button>
-    </Link>
+    <S.Button>
+      <ButtonGeral>Sobre</ButtonGeral>
+    </S.Button>
   </S.Wrapper>
 )
 

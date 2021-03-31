@@ -3,7 +3,7 @@ import * as S from './styles'
 import MediaMatch from 'components/MediaMatch'
 
 const VideoBg = () => {
-  const videoSource = 'videos/video-small.mp4'
+  const videoSource = 'videos/video-large.mp4'
 
   return (
     <S.Wrapper>

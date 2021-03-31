@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 import * as S from './styles'
 
 import ButtonGeral from 'components/ButtonGeral'
@@ -63,11 +61,9 @@ const SecAbout = ({
             </ul>
           </S.Partnerships>
 
-          <Link href="/sobre">
-            <S.Button>
-              <ButtonGeral>Saiba Mais</ButtonGeral>
-            </S.Button>
-          </Link>
+          <S.Button>
+            <ButtonGeral>Saiba Mais</ButtonGeral>
+          </S.Button>
         </S.Content>
       </S.Box>
     </TheContainer>

@@ -16,7 +16,9 @@ const NavMain = () => {
     <S.Wrapper>
       <TheContainer>
         <S.Brand>
-          <LogoGeral />
+          <a>
+            <LogoGeral />
+          </a>
         </S.Brand>
 
         {/* nav full is mobile */}
@@ -61,9 +63,7 @@ const NavMain = () => {
               </S.NavSocial>
 
               <S.NavButton>
-                <a href="#contato">
-                  <ButtonGeral>contato</ButtonGeral>
-                </a>
+                <ButtonGeral>contato</ButtonGeral>
               </S.NavButton>
             </S.NavContainer>
           </S.Nav>

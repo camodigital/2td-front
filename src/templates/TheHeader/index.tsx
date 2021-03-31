@@ -8,7 +8,7 @@ const TheHeader = () => {
   const [scrolling, setScrolling] = useState(false)
 
   useEffect(() => {
-    document.addEventListener('scroll', function () {
+    const checkScroll = () => {
       const yOffset = window.pageYOffset
 
       if (yOffset > 10) {
@@ -16,8 +16,13 @@ const TheHeader = () => {
       } else {
         setScrolling(false)
       }
-    })
-  }, [scrolling])
+    }
+
+    window.addEventListener('scroll', checkScroll)
+    return function unMount() {
+      window.removeEventListener('scroll', checkScroll)
+    }
+  }, [])
 
   return (
     <S.Wrapper className={scrolling ? 'scrolling' : ''}>

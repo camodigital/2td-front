@@ -14,5 +14,18 @@ export const Wrapper = styled.div<LogoProps>`
         }
       }
     }
+
+    :hover {
+      svg {
+        path {
+          :nth-child(1) {
+            fill: ${theme.colors[color2!]};
+          }
+          :nth-child(2) {
+            fill: ${theme.colors[color1!]};
+          }
+        }
+      }
+    }
   `}
 `

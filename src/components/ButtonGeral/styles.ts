@@ -28,7 +28,7 @@ const WrapperModifiers = {
   `
 }
 
-export const Wrapper = styled.a<WrapperProps>`
+export const Wrapper = styled.button<WrapperProps>`
   ${({ theme, styleButton }) => css`
     padding: ${theme.spacings.xxsmall} ${theme.spacings.small};
 
