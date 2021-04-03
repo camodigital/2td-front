@@ -10,7 +10,7 @@ const VideoBgMask = () => {
 
   useEffect(() => {
     setVideoUrl('videos/video-large.mp4')
-    setPosterUrl('images/bg-video.jpg')
+    setPosterUrl('images/video-bg.webp')
   }, [videoUrl, posterUrl])
 
   return (

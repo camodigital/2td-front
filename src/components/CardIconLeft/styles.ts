@@ -35,14 +35,19 @@ export const Icon = styled.div`
 
     background-color: ${theme.colors.primary};
 
-    svg {
-      width: ${theme.sizes.xxlarge};
-      height: ${theme.sizes.xxlarge};
+    img {
+      width: ${theme.sizes.xlarge};
+      height: ${theme.sizes.xlarge};
     }
 
-    ${media.greaterThan('huge')`
+    ${media.greaterThan('large')`
       width: 5rem;
       height: 5rem;
+
+      img {
+        width: ${theme.sizes.xxlarge};
+        height: ${theme.sizes.xxlarge};
+      }
     `}
   `}
 `

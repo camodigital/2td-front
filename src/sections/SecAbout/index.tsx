@@ -26,7 +26,7 @@ const SecAbout = ({
     <TheContainer size="medium">
       <MediaMatch greaterThan="large">
         <S.Phone>
-          <img src="images/phone.png" alt="Telefone celular" />
+          <img src="images/phone.webp" alt="Telefone celular" />
         </S.Phone>
       </MediaMatch>
 
