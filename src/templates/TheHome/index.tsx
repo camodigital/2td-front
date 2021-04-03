@@ -82,7 +82,7 @@ const TheHome = ({
       <VideoBgMask />
     </section>
 
-    <section className="section" id="servicos">
+    <section className="section" id="nextSec">
       <SecServices
         servicesTitle={servicesTitle}
         servicesSubtitle={servicesSubtitle}

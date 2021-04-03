@@ -3,7 +3,7 @@ import * as S from './styles'
 import TheContainer from 'components/TheContainer'
 import HeroHome from 'components/HeroHome'
 import VideoBg from 'components/VideoBg'
-import IcoArrowDown from 'icons/IcoArrowDown'
+import ScrollNext from 'components/ScrollNext'
 
 export type SecIntroProps = {
   introPretitle: string
@@ -27,12 +27,7 @@ const SecIntro = ({ introPretitle, introTitle, IntroText }: SecIntroProps) => (
     </TheContainer>
 
     <S.Scroll>
-      <a href="#servicos">
-        <div className="text">scroll</div>
-        <div className="ico">
-          <IcoArrowDown />
-        </div>
-      </a>
+      <ScrollNext />
     </S.Scroll>
   </S.Wrapper>
 )

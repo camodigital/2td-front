@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import * as S from './styles'
 
 import HeadingArea from 'components/HeadingArea'
@@ -27,7 +29,11 @@ const HeroHome = ({ pretitle, title, text }: HeroHomeProps) => (
     </S.Text>
 
     <S.Button>
-      <ButtonGeral>Sobre</ButtonGeral>
+      <Link href="/sobre">
+        <a>
+          <ButtonGeral>Sobre</ButtonGeral>
+        </a>
+      </Link>
     </S.Button>
   </S.Wrapper>
 )
