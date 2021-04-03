@@ -20,9 +20,7 @@ const NavMain = ({ color }: NavMainProps) => {
     <S.Wrapper>
       <TheContainer>
         <S.Brand>
-          <a>
-            <LogoGeral />
-          </a>
+          <LogoGeral />
         </S.Brand>
 
         {/* nav full is mobile */}

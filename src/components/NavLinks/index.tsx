@@ -1,23 +1,23 @@
-import Link from 'next/link'
+import ActiveLink from 'components/ActiveLink'
 
 import * as S from './styles'
 
 const NavLinks = () => (
   <S.Wrapper>
     <S.NavItem>
-      <Link href="/">
+      <ActiveLink href="/" linkName="teste">
         <S.NavLink title="Home">Home</S.NavLink>
-      </Link>
+      </ActiveLink>
     </S.NavItem>
     <S.NavItem>
-      <Link href="/sobre">
+      <ActiveLink href="/sobre">
         <S.NavLink title="Sobre">Sobre</S.NavLink>
-      </Link>
+      </ActiveLink>
     </S.NavItem>
     <S.NavItem>
-      <Link href="/servicos">
+      <ActiveLink href="/servicos">
         <S.NavLink title="Serviços">Serviços</S.NavLink>
-      </Link>
+      </ActiveLink>
     </S.NavItem>
   </S.Wrapper>
 )

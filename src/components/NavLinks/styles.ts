@@ -52,7 +52,8 @@ export const NavLink = styled.a`
       transition: 0.5s ease-in-out;
     }
 
-    :hover {
+    :hover,
+    &.active {
       ::after {
         transform: scaleX(1);
       }

@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import * as S from './styles'
 
 import Logo2TD from 'icons/Logo2TD'
@@ -10,7 +12,11 @@ export type LogoProps = {
 const LogoGeral = ({ color1 = 'primary', color2 = 'secondary' }: LogoProps) => {
   return (
     <S.Wrapper color1={color1} color2={color2}>
-      <Logo2TD />
+      <Link href="/">
+        <a href="/">
+          <Logo2TD />
+        </a>
+      </Link>
     </S.Wrapper>
   )
 }

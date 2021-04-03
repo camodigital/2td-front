@@ -201,7 +201,10 @@ export const Recaptcha = styled.div`
   }
   &.hide {
     height: 0px;
+
     transform: scale(0);
+
+    pointer-events: none;
 
     opacity: 0;
   }

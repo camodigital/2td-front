@@ -9,7 +9,11 @@ export type SocialLinksProps = {
 const SocialLinks = ({ colorIcon }: SocialLinksProps) => (
   <S.Wrapper className="social-links">
     <S.SocialItem>
-      <S.SocialLink href="" title="Instagram 2TD">
+      <S.SocialLink
+        href="https://www.instagram.com/2tdtecnologia/?hl=pt-br"
+        target="_blank"
+        title="Instagram 2TD"
+      >
         <S.SocialIcon colorIcon={colorIcon}>
           <IcoInstagram />
         </S.SocialIcon>
@@ -17,7 +21,11 @@ const SocialLinks = ({ colorIcon }: SocialLinksProps) => (
     </S.SocialItem>
 
     <S.SocialItem>
-      <S.SocialLink href="" title="Linkedin 2TD">
+      <S.SocialLink
+        href="https://br.linkedin.com/company/2td"
+        target="_blank"
+        title="Linkedin 2TD"
+      >
         <S.SocialIcon colorIcon={colorIcon}>
           <IcoLinkedin />
         </S.SocialIcon>
