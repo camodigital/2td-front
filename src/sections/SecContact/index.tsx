@@ -7,24 +7,40 @@ import IcoEmail from 'icons/IcoEmail'
 import IcoPhone from 'icons/IcoPhone'
 import MapContainer from 'components/MapContainer'
 
-const SecContact = () => {
+type SecContactProps = {
+  title: string
+  subtitle: string
+  telefone: string
+  email: string
+  latitude: number
+  longitude: number
+}
+
+const SecContact = ({
+  title,
+  subtitle,
+  telefone,
+  email,
+  latitude,
+  longitude
+}: SecContactProps) => {
   return (
     <S.Wrapper id="contato">
       <S.Map>
-        <MapContainer />
+        <MapContainer latitude={latitude} longitude={longitude} />
       </S.Map>
 
       <S.Content>
         <S.Header>
           <S.Title>
             <HeadingSection>
-              Entre em <strong>Contato</strong>
+              <span dangerouslySetInnerHTML={{ __html: title }}></span>
             </HeadingSection>
           </S.Title>
 
           <S.Subtitle>
             <HeadingSubtitle>
-              Nos deixe saber em que podemos ajudar
+              <span dangerouslySetInnerHTML={{ __html: subtitle }}></span>
             </HeadingSubtitle>
           </S.Subtitle>
         </S.Header>
@@ -34,14 +50,14 @@ const SecContact = () => {
             <div className="ico">
               <IcoEmail />
             </div>
-            <div className="text">contato@2td.com</div>
+            <div className="text">{email}</div>
           </div>
 
           <div className="item">
             <div className="ico">
               <IcoPhone />
             </div>
-            <div className="text">+55 (61) 9999 9999</div>
+            <div className="text">{telefone}</div>
           </div>
         </S.Infos>
 

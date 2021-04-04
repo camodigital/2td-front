@@ -4,6 +4,11 @@ const MAPBOX_API_KEY = process.env.NEXT_PUBLIC_MAPBOX_API_KEY
 const MAPBOX_USERID = process.env.NEXT_PUBLIC_MAPBOX_USERID
 const MAPBOX_STYLEID = process.env.NEXT_PUBLIC_MAPBOX_STYLEID
 
+export type MapProps = {
+  latitude: number
+  longitude: number
+}
+
 const CustomTileLayer = () => {
   return MAPBOX_API_KEY ? (
     <TileLayer
@@ -18,17 +23,17 @@ const CustomTileLayer = () => {
   )
 }
 
-const Map = () => {
+const Map = ({ latitude, longitude }: MapProps) => {
   return (
     <MapContainer
-      center={[-15.8270416, -47.9556232]}
-      zoom={7}
+      center={[latitude, longitude]}
+      zoom={13}
       scrollWheelZoom={false}
       style={{ height: '100%', width: '100%' }}
     >
       <CustomTileLayer />
 
-      <Marker position={[-15.8270416, -47.9556232]}>
+      <Marker position={[latitude, longitude]}>
         <Popup>
           2TD - ST SGCV Lote 22, Loja 22 - Shopping Casa Park - Guará -
           Brasília/DF - CEP: 71.215-720

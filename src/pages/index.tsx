@@ -31,7 +31,14 @@ export default function Home({
   clientsTitle,
   clientsSubtitle,
   clientsTestimony,
-  clientsLogos
+  clientsLogos,
+  // contact
+  contactTitle,
+  contactSubtitle,
+  contactTelefone,
+  contactEmail,
+  contactLongitude,
+  contactLatitude
 }: TheHomeProps) {
   return (
     <>
@@ -61,6 +68,12 @@ export default function Home({
         clientsSubtitle={clientsSubtitle}
         clientsTestimony={clientsTestimony}
         clientsLogos={clientsLogos}
+        contactTitle={contactTitle}
+        contactSubtitle={contactSubtitle}
+        contactTelefone={contactTelefone}
+        contactEmail={contactEmail}
+        contactLatitude={contactLatitude}
+        contactLongitude={contactLongitude}
       />
       <TheFooter />
     </>
@@ -83,7 +96,8 @@ export const getStaticProps = async () => {
     clientesTitulo,
     clientesSubtitulo,
     colecoesDepoimento,
-    logoClientes
+    logoClientes,
+    secaoDeContato
   } = paginasHome[0]
 
   return {
@@ -115,7 +129,14 @@ export const getStaticProps = async () => {
       clientsTitle: clientesTitulo.html,
       clientsSubtitle: clientesSubtitulo.html,
       clientsTestimony: colecoesDepoimento,
-      clientsLogos: logoClientes
+      clientsLogos: logoClientes,
+      // contato
+      contactTitle: secaoDeContato.titulo.html,
+      contactSubtitle: secaoDeContato.subtitulo,
+      contactTelefone: secaoDeContato.telefone,
+      contactEmail: secaoDeContato.eMail,
+      contactLongitude: secaoDeContato.localizacao.latitude,
+      contactLatitude: secaoDeContato.localizacao.longitude
     }
   }
 }

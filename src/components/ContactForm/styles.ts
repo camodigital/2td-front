@@ -33,21 +33,12 @@ export const InputGroup = styled.div`
 
       transition: 0.5s;
     }
+    input:focus {
+      padding: ${theme.spacings.xxsmall};
 
-    &.active {
-      label {
-        top: 4rem;
-        left: 0;
-        transform: translateY(0) scale(0.8);
-      }
+      border: 0;
 
-      input {
-        padding: ${theme.spacings.xxsmall};
-
-        border: 0;
-
-        box-shadow: ${theme.shadows.tinyShadow};
-      }
+      box-shadow: ${theme.shadows.tinyShadow};
     }
   `}
 `
@@ -75,20 +66,12 @@ export const TextareaGroup = styled.div`
       border: 1px solid ${theme.colors.textLight};
     }
 
-    &.active {
-      label {
-        top: 15rem;
-        left: 0;
-        transform: translateY(0) scale(0.8);
-      }
+    textarea:focus {
+      padding: ${theme.spacings.xxsmall};
 
-      textarea {
-        padding: ${theme.spacings.xxsmall};
+      border: 0;
 
-        border: 0;
-
-        box-shadow: ${theme.shadows.tinyShadow};
-      }
+      box-shadow: ${theme.shadows.tinyShadow};
     }
   `}
 `

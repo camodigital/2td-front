@@ -9,7 +9,6 @@ import Button from 'components/ButtonGeral'
 export default function ContactUs() {
   const [recaptchaLoad, setRecaptchaLoad] = useState(false)
   const [isVerified, setIsVerified] = useState(false)
-  const [fieldActive, setFieldActive] = useState(false)
   const [showCaptcha, setShowCaptcha] = useState(false)
   const [showWarningFill, setShowWarningFill] = useState(false)
   const [showWarningSucess, setShowWarningSucess] = useState(false)
@@ -98,10 +97,6 @@ export default function ContactUs() {
     }
   }
 
-  function handlerFocusField() {
-    setFieldActive(true)
-  }
-
   return (
     <S.Wrapper onKeyUp={handlerCaptcha}>
       <form className="contact-form" onSubmit={sendEmail}>
@@ -123,42 +118,33 @@ export default function ContactUs() {
           </S.WarningCaptcha>
         </S.Warnings>
 
-        <S.InputGroup
-          onKeyUp={handlerCaptcha}
-          onFocus={handlerFocusField}
-          className={fieldActive ? 'active' : ''}
-        >
-          <label>Nome</label>
+        <S.InputGroup>
           <input
+            onKeyUp={handlerCaptcha}
             type="text"
             name="user_name"
-            className="from-name"
-            onFocus={handlerFocusField}
             ref={nameRef}
+            placeholder="Nome"
           />
         </S.InputGroup>
 
-        <S.InputGroup
-          onKeyUp={handlerCaptcha}
-          onFocus={handlerFocusField}
-          className={fieldActive ? 'active' : ''}
-        >
-          <label>E-mail</label>
+        <S.InputGroup>
           <input
+            onKeyUp={handlerCaptcha}
             type="email"
             name="user_email"
-            className="from-email"
             ref={emailRef}
+            placeholder="E-mail"
           />
         </S.InputGroup>
 
-        <S.TextareaGroup
-          onKeyUp={handlerCaptcha}
-          onFocus={handlerFocusField}
-          className={fieldActive ? 'active' : ''}
-        >
-          <label>Mensagem</label>
-          <textarea name="message" ref={messageRef} />
+        <S.TextareaGroup>
+          <textarea
+            name="message"
+            ref={messageRef}
+            onKeyUp={handlerCaptcha}
+            placeholder="Mesangem"
+          />
         </S.TextareaGroup>
 
         <S.Recaptcha className={showCaptcha ? 'show' : 'hide'}>

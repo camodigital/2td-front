@@ -38,6 +38,13 @@ export type TheHomeProps = {
     { titulo: string; texto: { html: string }; nome: string; cargo: string }
   ]
   clientsLogos: [{ url: string; width: string; height: string }]
+  // contato
+  contactTitle: string
+  contactSubtitle: string
+  contactTelefone: string
+  contactEmail: string
+  contactLongitude: number
+  contactLatitude: number
 }
 
 const TheHome = ({
@@ -67,7 +74,14 @@ const TheHome = ({
   clientsTitle,
   clientsSubtitle,
   clientsTestimony,
-  clientsLogos
+  clientsLogos,
+  // contato
+  contactTitle,
+  contactSubtitle,
+  contactTelefone,
+  contactEmail,
+  contactLongitude,
+  contactLatitude
 }: TheHomeProps) => (
   <S.Wrapper className="page">
     <section className="section">
@@ -119,7 +133,14 @@ const TheHome = ({
     </section>
 
     <section className="section">
-      <SecContact />
+      <SecContact
+        title={contactTitle}
+        subtitle={contactSubtitle}
+        telefone={contactTelefone}
+        email={contactEmail}
+        latitude={contactLongitude}
+        longitude={contactLatitude}
+      />
     </section>
   </S.Wrapper>
 )

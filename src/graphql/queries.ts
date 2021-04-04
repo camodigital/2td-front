@@ -59,18 +59,16 @@ export const GET_HOME = gql`
         width
         height
       }
-      colecaoContato {
+      secaoDeContato {
         titulo {
           html
         }
-        subtitulo {
-          html
-        }
+        subtitulo
         telefone
         eMail
         localizacao {
-          longitude
           latitude
+          longitude
         }
       }
     }
@@ -95,13 +93,47 @@ export const GET_SOBRE = gql`
       fotoIntro2 {
         url
       }
-      tituloPorQueA2Td
-      textoPorQueA2Td {
+      iconeColuna1 {
+        url
+      }
+      tituloColuna1
+      textoColuna1 {
         html
       }
-      tituloResultado
-      textoResultado {
+      iconeColuna2 {
+        url
+      }
+      tituloColuna2
+      textoColuna2 {
         html
+      }
+      iconeColuna3 {
+        url
+      }
+      tituloColuna3
+      textoColuna3 {
+        html
+      }
+      secaoQualLingua {
+        titulo
+        logos {
+          url
+          width
+          height
+        }
+        textoFinal
+      }
+      secaoDeContato {
+        titulo {
+          html
+        }
+        subtitulo
+        telefone
+        eMail
+        localizacao {
+          latitude
+          longitude
+        }
       }
     }
   }
@@ -124,6 +156,48 @@ export const GET_SERVICOS = gql`
       }
       fotoIntro2 {
         url
+      }
+      iconeColuna1 {
+        url
+      }
+      tituloColuna1
+      textoColuna1 {
+        html
+      }
+      iconeColuna2 {
+        url
+      }
+      tituloColuna2
+      textoColuna2 {
+        html
+      }
+      iconeColuna3 {
+        url
+      }
+      tituloColuna3
+      textoColuna3 {
+        html
+      }
+      secaoQualLingua {
+        titulo
+        logos {
+          url
+          width
+          height
+        }
+        textoFinal
+      }
+      secaoDeContato {
+        titulo {
+          html
+        }
+        subtitulo
+        telefone
+        eMail
+        localizacao {
+          latitude
+          longitude
+        }
       }
     }
   }

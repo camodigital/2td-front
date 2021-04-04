@@ -9,7 +9,9 @@ const TheFooter = () => (
         <Logo2TD />
       </div>
 
-      <div className="copyright">All Rights Reserved 2021 2TD</div>
+      <div className="copyright">
+        Todos os direitos reservados 2021 - <span className="feat">2TD</span>
+      </div>
     </TheContainer>
   </S.Wrapper>
 )

@@ -16,12 +16,16 @@ export const Wrapper = styled.div`
   `}
 `
 export const Header = styled.div`
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 
   text-align: center;
 `
 
 export const Infos = styled.div`
+  width: 100%;
+  max-width: 40rem;
+  margin: 0 auto;
+
   .item {
     margin-bottom: 1rem;
 
@@ -52,7 +56,9 @@ export const Infos = styled.div`
   `}
 `
 
-export const Title = styled.div``
+export const Title = styled.div`
+  margin-bottom: 1rem;
+`
 
 export const Subtitle = styled.div``
 
@@ -83,4 +89,8 @@ export const Map = styled.div`
   `}
 `
 
-export const Form = styled.div``
+export const Form = styled.div`
+  width: 100%;
+  max-width: 40rem;
+  margin: 0 auto;
+`

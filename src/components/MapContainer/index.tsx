@@ -1,8 +1,9 @@
 import { useMemo } from 'react'
 import dynamic from 'next/dynamic'
 import * as S from './styles'
+import { MapProps } from 'components/Map'
 
-const MapContainer = () => {
+const MapContainer = ({ latitude, longitude }: MapProps) => {
   const Map = useMemo(
     () =>
       dynamic(
@@ -19,7 +20,7 @@ const MapContainer = () => {
   )
   return (
     <S.Wrapper>
-      <Map />
+      <Map latitude={latitude} longitude={longitude} />
     </S.Wrapper>
   )
 }

@@ -15,6 +15,10 @@ export const Wrapper = styled.footer`
       .brand {
         width: 8rem;
       }
+
+      .feat {
+        color: ${theme.colors.primary};
+      }
     }
 
     background-color: ${theme.colors.bg};

@@ -10,6 +10,26 @@ type PageSobreProps = {
   textIntro: string
   photoIntro1: string
   photoIntro2: string
+  iconCol1: string
+  iconCol2: string
+  iconCol3: string
+  titleCol1: string
+  titleCol2: string
+  titleCol3: string
+  textCol1: string
+  textCol2: string
+  textCol3: string
+  // WhichLanguage
+  whichLanguageTitle: string
+  whichLanguageLogos: [{ url: string; width: string; height: string }]
+  WhichLanguageText: string
+  // contato
+  contactTitle: string
+  contactSubtitle: string
+  contactTelefone: string
+  contactEmail: string
+  contactLongitude: number
+  contactLatitude: number
 }
 
 export default function PageSobre({
@@ -17,7 +37,27 @@ export default function PageSobre({
   subtitleIntro,
   textIntro,
   photoIntro1,
-  photoIntro2
+  photoIntro2,
+  iconCol1,
+  iconCol2,
+  iconCol3,
+  titleCol1,
+  titleCol2,
+  titleCol3,
+  textCol1,
+  textCol2,
+  textCol3,
+  // WhichLanguage
+  whichLanguageTitle,
+  whichLanguageLogos,
+  WhichLanguageText,
+  // contact
+  contactTitle,
+  contactSubtitle,
+  contactTelefone,
+  contactEmail,
+  contactLongitude,
+  contactLatitude
 }: PageSobreProps) {
   return (
     <>
@@ -28,16 +68,24 @@ export default function PageSobre({
         text={textIntro}
         photo1={photoIntro1}
         photo2={photoIntro2}
-        titleCol1="Por que a 2TD?"
-        textCol1="Se a sua empresa não consegue evoluir por que a equipe vive “apagando incêndio” e essa rotina absorve quase 100% do tempo dos gestores e dos técnicos, a 2TD pode (mesmo!) te ajudar.
-
-        Com a aplicação de observability, conseguimos atuar na causa raiz do problema. A 2TD é expert em investigar, identificar alertas, monitorar, descobrir, analisar e entender o problema para propor soluções.
-
-        O método de trabalho da 2TD concilia as melhoras práticas de PDCA, LeanIT e metodologias ágeis."
-        titleCol2="E o resultado?"
-        textCol2="Ganho de performance, economia de recursos, cliente satisfeito, diminuição de estresse, de custos e de reclamações. E ainda sobra tempo para focar em outras melhorias."
-        titleCol3=""
-        textCol3=""
+        iconCol1={iconCol1}
+        iconCol2={iconCol2}
+        iconCol3={iconCol3}
+        titleCol1={titleCol1}
+        titleCol2={titleCol2}
+        titleCol3={titleCol3}
+        textCol1={textCol1}
+        textCol2={textCol2}
+        textCol3={textCol3}
+        whichLanguageTitle={whichLanguageTitle}
+        whichLanguageLogos={whichLanguageLogos}
+        WhichLanguageText={WhichLanguageText}
+        contactTitle={contactTitle}
+        contactSubtitle={contactSubtitle}
+        contactTelefone={contactTelefone}
+        contactEmail={contactEmail}
+        contactLatitude={contactLatitude}
+        contactLongitude={contactLongitude}
       />
       <TheFooter />
     </>
@@ -52,7 +100,18 @@ export const getStaticProps = async () => {
     subtituloIntro,
     textoIntro,
     fotoIntro1,
-    fotoIntro2
+    fotoIntro2,
+    secaoDeContato,
+    iconeColuna1,
+    iconeColuna2,
+    iconeColuna3,
+    tituloColuna1,
+    tituloColuna2,
+    tituloColuna3,
+    textoColuna1,
+    textoColuna2,
+    textoColuna3,
+    secaoQualLingua
   } = paginasSobre[0]
 
   return {
@@ -61,7 +120,27 @@ export const getStaticProps = async () => {
       subtitleIntro: subtituloIntro.html,
       textIntro: textoIntro.html,
       photoIntro1: fotoIntro1.url,
-      photoIntro2: fotoIntro2.url
+      photoIntro2: fotoIntro2.url,
+      iconCol1: iconeColuna1.url,
+      iconCol2: iconeColuna2.url,
+      iconCol3: iconeColuna3.url,
+      titleCol1: tituloColuna1,
+      titleCol2: tituloColuna2,
+      titleCol3: tituloColuna3,
+      textCol1: textoColuna1.html,
+      textCol2: textoColuna2.html,
+      textCol3: textoColuna3.html,
+      // whichLanguage
+      whichLanguageTitle: secaoQualLingua.titulo,
+      whichLanguageLogos: secaoQualLingua.logos,
+      WhichLanguageText: secaoQualLingua.textoFinal,
+      // contato
+      contactTitle: secaoDeContato.titulo.html,
+      contactSubtitle: secaoDeContato.subtitulo,
+      contactTelefone: secaoDeContato.telefone,
+      contactEmail: secaoDeContato.eMail,
+      contactLongitude: secaoDeContato.localizacao.latitude,
+      contactLatitude: secaoDeContato.localizacao.longitude
     }
   }
 }

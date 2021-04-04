@@ -1,39 +1,39 @@
+import Image from 'next/image'
+
 import HeadingArea from 'components/HeadingArea'
 import TheContainer from 'components/TheContainer'
 import * as S from './styles'
 
-const WhichLanguage = () => (
+type WhichLanguageProps = {
+  title: string
+  logos: [{ url: string; width: string; height: string }]
+  text: string
+}
+
+const WhichLanguage = ({ title, logos, text }: WhichLanguageProps) => (
   <S.Wrapper>
     <TheContainer size="medium">
       <S.Title>
-        <HeadingArea>
-          Que língua seu negócio fala? Nós falamos também.
-        </HeadingArea>
+        <HeadingArea>{title}</HeadingArea>
       </S.Title>
-
       <S.Content>
-        <li>
-          <img src="images/logoDynatrace.svg" alt="Dynatrace" />
-        </li>
-        <li>
-          <img src="images/logoAws.svg" alt="AWS" />
-        </li>
-        <li>
-          <img src="images/logoAzure.svg" alt="Windows Azure" />
-        </li>
-        <li>
-          <img src="images/logoGoogleCloud.svg" alt="Google Cloud" />
-        </li>
-        <li>
-          <img src="images/logoPHP.svg" alt="PHP" />
-        </li>
-        <li>
-          <img src="images/logoPython.svg" alt="Python" />
-        </li>
-        <li>
-          <img src="images/logoOracle.svg" alt="Oracle" />
-        </li>
-        <li>e muito mais...</li>
+        <ul className="itens">
+          {logos &&
+            logos.map((item, i) => {
+              return (
+                <li key={i}>
+                  <Image
+                    src={item.url}
+                    alt={item.url}
+                    width={item.width}
+                    height={item.height}
+                    quality={75}
+                  />
+                </li>
+              )
+            })}
+          <li>{text}</li>
+        </ul>
       </S.Content>
     </TheContainer>
   </S.Wrapper>
