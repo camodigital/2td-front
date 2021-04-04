@@ -1,3 +1,6 @@
+import Image from 'next/image'
+import Link from 'next/link'
+
 import * as S from './styles'
 
 import ButtonGeral from 'components/ButtonGeral'
@@ -10,7 +13,7 @@ import BGVerde from 'icons/BGVerde'
 type SecAboutProps = {
   aboutTitle: string
   aboutText: string
-  aboutPartnerships: [{ url: string }]
+  aboutPartnerships: [{ url: string; width: string; height: string }]
 }
 
 const SecAbout = ({
@@ -54,7 +57,13 @@ const SecAbout = ({
                 aboutPartnerships.map((item, i) => {
                   return (
                     <li key={i}>
-                      <img src={item.url} alt="Logo Parceiro" />
+                      <Image
+                        src={item.url}
+                        alt={item.url}
+                        width={item.width}
+                        height={item.height}
+                        quality={75}
+                      />
                     </li>
                   )
                 })}
@@ -62,7 +71,11 @@ const SecAbout = ({
           </S.Partnerships>
 
           <S.Button>
-            <ButtonGeral>Saiba Mais</ButtonGeral>
+            <Link href="/servicos">
+              <a>
+                <ButtonGeral>Saiba Mais</ButtonGeral>
+              </a>
+            </Link>
           </S.Button>
         </S.Content>
       </S.Box>

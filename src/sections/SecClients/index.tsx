@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 import * as S from './styles'
 
 import TheContainer from 'components/TheContainer'
@@ -12,7 +14,7 @@ type SecClientsProps = {
   clientsTestimony: [
     { titulo: string; texto: { html: string }; nome: string; cargo: string }
   ]
-  clientsLogos: [{ url: string }]
+  clientsLogos: [{ url: string; width: string; height: string }]
 }
 
 const SecClients = ({
@@ -60,7 +62,13 @@ const SecClients = ({
             clientsLogos.map((item) => {
               return (
                 <li key={item.url}>
-                  <img src={item.url} alt="Logo" />
+                  <Image
+                    src={item.url}
+                    alt={item.url}
+                    width={item.width}
+                    height={item.height}
+                    quality={100}
+                  />
                 </li>
               )
             })}

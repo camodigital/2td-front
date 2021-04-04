@@ -37,6 +37,8 @@ export const GET_HOME = gql`
       }
       parceriasLogos {
         url
+        width
+        height
       }
       clientesTitulo {
         html
@@ -54,6 +56,22 @@ export const GET_HOME = gql`
       }
       logoClientes {
         url
+        width
+        height
+      }
+      colecaoContato {
+        titulo {
+          html
+        }
+        subtitulo {
+          html
+        }
+        telefone
+        eMail
+        localizacao {
+          longitude
+          latitude
+        }
       }
     }
   }

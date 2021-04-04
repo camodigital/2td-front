@@ -34,7 +34,7 @@ export const BGVerde = styled.div`
     `}
 
     ${media.greaterThan('huge')`
-      transform: translateX(-55%) translateY(-30%);
+      transform: translateX(-58%) translateY(-30%);
     `}
 
     @media (min-width: 2500px) {
@@ -91,6 +91,14 @@ export const Partnerships = styled.div`
       li {
         padding: ${theme.spacings.xxxsmall};
 
+        :first-child {
+          padding-left: 0;
+        }
+
+        :last-child {
+          padding-right: 0;
+        }
+
         img {
           height: ${theme.sizes.small};
         }
@@ -99,7 +107,7 @@ export const Partnerships = styled.div`
           padding: ${theme.spacings.small};
 
           img {
-            height: ${theme.sizes.xlarge};
+            height: ${theme.sizes.xxlarge};
           }
         `}
       }

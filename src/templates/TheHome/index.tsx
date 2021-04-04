@@ -30,14 +30,14 @@ export type TheHomeProps = {
   // about
   aboutTitle: string
   aboutText: string
-  aboutPartnerships: [{ url: string }]
+  aboutPartnerships: [{ url: string; width: string; height: string }]
   // clients
   clientsTitle: string
   clientsSubtitle: string
   clientsTestimony: [
     { titulo: string; texto: { html: string }; nome: string; cargo: string }
   ]
-  clientsLogos: [{ url: string }]
+  clientsLogos: [{ url: string; width: string; height: string }]
 }
 
 const TheHome = ({
