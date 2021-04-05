@@ -1,4 +1,3 @@
-import HeadingArea from 'components/HeadingArea'
 import * as S from './styles'
 
 export type CleanSlideProps = {
@@ -12,7 +11,7 @@ const CleanSlide = ({ title, text, name, role }: CleanSlideProps) => (
   <S.Container>
     <S.Content>
       <S.Title>
-        <HeadingArea>{title}</HeadingArea>
+        <div className="title">{title}</div>
       </S.Title>
       <S.Text>
         <span dangerouslySetInnerHTML={{ __html: text }} />

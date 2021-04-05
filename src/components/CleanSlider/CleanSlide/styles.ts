@@ -22,6 +22,7 @@ export const Title = styled.div`
     text-align: center;
 
     h4 {
+      font-size: 3rem;
       color: ${theme.colors.primary};
     }
   `}
