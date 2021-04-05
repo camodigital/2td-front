@@ -11,7 +11,7 @@ const CleanSlide = ({ title, text, name, role }: CleanSlideProps) => (
   <S.Container>
     <S.Content>
       <S.Title>
-        <div className="title">{title}</div>
+        <h4 className="title">{title}</h4>
       </S.Title>
       <S.Text>
         <span dangerouslySetInnerHTML={{ __html: text }} />
