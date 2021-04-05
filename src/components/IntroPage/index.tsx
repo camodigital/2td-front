@@ -5,6 +5,7 @@ import HeadingSubtitle from 'components/HeadingSubtitle'
 import TheContainer from 'components/TheContainer'
 import BGVerde from 'icons/BGVerde'
 import * as S from './styles'
+import ScrollNext from 'components/ScrollNext'
 
 type IntroPageProps = {
   title: string
@@ -27,6 +28,7 @@ const IntroPage = ({
         <BGVerde />
       </S.BG>
       <TheContainer size="right">
+        <ScrollNext />
         <S.Box>
           <S.Content>
             <S.Header>
