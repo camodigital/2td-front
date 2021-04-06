@@ -60,7 +60,9 @@ export const ContentHover = styled.div<ButtonMenuProps>`
     color: ${theme.colors[color]};
 
     span {
-      animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite
+      display: inline-block;
+
+      animation: slideArrow 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite
         alternate;
 
       svg {
@@ -72,7 +74,7 @@ export const ContentHover = styled.div<ButtonMenuProps>`
       }
     }
 
-    @keyframes slide-top {
+    @keyframes slideArrow {
       0% {
         transform: translateY(0);
       }

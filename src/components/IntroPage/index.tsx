@@ -28,7 +28,6 @@ const IntroPage = ({
         <BGVerde />
       </S.BG>
       <TheContainer size="right">
-        <ScrollNext />
         <S.Box>
           <S.Content>
             <S.Header>
@@ -73,6 +72,10 @@ const IntroPage = ({
           </S.Photos>
         </S.Box>
       </TheContainer>
+
+      <S.Scroll>
+        <ScrollNext />
+      </S.Scroll>
     </S.Wrapper>
   )
 }

@@ -1,0 +1,2 @@
+PRODUÇÃO:         git remote set-url origin git@github.com:web2td/site.git
+DESENVOLVIMENTO:  git remote set-url origin git@github.com:camodigital/2td-front.git

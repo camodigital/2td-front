@@ -10,8 +10,10 @@ const ButtonMenu = ({ color }: ButtonMenuProps) => {
     const contact: HTMLElement | null = document.getElementById('contato')
 
     if (contact) {
-      const contactPosY = contact.getBoundingClientRect().top
-      window.scrollTo({ top: contactPosY, left: 0, behavior: 'smooth' })
+      contact.scrollIntoView({
+        behavior: 'smooth',
+        inline: 'end'
+      })
     }
   }
 

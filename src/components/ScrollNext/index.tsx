@@ -5,10 +5,13 @@ const ScrollNext = () => {
     const contact: HTMLElement | null = document.getElementById('nextSec')
 
     if (contact) {
-      const contactPosY = contact.getBoundingClientRect().top
-      window.scrollTo({ top: contactPosY, left: 0, behavior: 'smooth' })
+      contact.scrollIntoView({
+        behavior: 'smooth',
+        inline: 'end'
+      })
     }
   }
+
   return (
     <S.Wrapper onClick={scrollTo}>
       <S.Icon>

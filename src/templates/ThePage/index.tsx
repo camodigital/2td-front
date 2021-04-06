@@ -60,39 +60,48 @@ const ThePage = ({
   contactLatitude
 }: ThePageProps) => (
   <S.Wrapper>
-    <IntroPage
-      title={title}
-      subtitle={subtitle}
-      text={text}
-      photo1={photo1}
-      photo2={photo2}
-    />
+    <section>
+      <IntroPage
+        title={title}
+        subtitle={subtitle}
+        text={text}
+        photo1={photo1}
+        photo2={photo2}
+      />
+    </section>
 
-    <ThreeColumns
-      icon1={iconCol1}
-      icon2={iconCol2}
-      icon3={iconCol3}
-      title1={titleCol1}
-      title2={titleCol2}
-      title3={titleCol3}
-      text1={textCol1}
-      text2={textCol2}
-      text3={textCol3}
-    />
+    <section id="nextSec">
+      <ThreeColumns
+        icon1={iconCol1}
+        icon2={iconCol2}
+        icon3={iconCol3}
+        title1={titleCol1}
+        title2={titleCol2}
+        title3={titleCol3}
+        text1={textCol1}
+        text2={textCol2}
+        text3={textCol3}
+      />
+    </section>
 
-    <WhichLanguage
-      title={whichLanguageTitle}
-      logos={whichLanguageLogos}
-      text={WhichLanguageText}
-    />
-    <SecContact
-      title={contactTitle}
-      subtitle={contactSubtitle}
-      telefone={contactTelefone}
-      email={contactEmail}
-      latitude={contactLongitude}
-      longitude={contactLatitude}
-    />
+    <section>
+      <WhichLanguage
+        title={whichLanguageTitle}
+        logos={whichLanguageLogos}
+        text={WhichLanguageText}
+      />
+    </section>
+
+    <section>
+      <SecContact
+        title={contactTitle}
+        subtitle={contactSubtitle}
+        telefone={contactTelefone}
+        email={contactEmail}
+        latitude={contactLongitude}
+        longitude={contactLatitude}
+      />
+    </section>
   </S.Wrapper>
 )
 
