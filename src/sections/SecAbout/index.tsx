@@ -6,9 +6,9 @@ import * as S from './styles'
 import ButtonGeral from 'components/ButtonGeral'
 import HeadingArea from 'components/HeadingArea'
 import HeadingSection from 'components/HeadingSection'
-import MediaMatch from 'components/MediaMatch'
 import TheContainer from 'components/TheContainer'
 import BGVerde from 'icons/BGVerde'
+import HideInMedia from 'components/HideInMedia'
 
 type SecAboutProps = {
   aboutTitle: string
@@ -27,11 +27,11 @@ const SecAbout = ({
     </S.BGVerde>
 
     <TheContainer size="medium">
-      <MediaMatch greaterThan="large">
+      <HideInMedia size="large">
         <S.Phone>
           <img src="images/phone.webp" alt="Telefone celular" />
         </S.Phone>
-      </MediaMatch>
+      </HideInMedia>
 
       <S.Box>
         <S.Header>

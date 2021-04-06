@@ -6,8 +6,8 @@ import * as S from './styles'
 import TheContainer from 'components/TheContainer'
 import HeadingSection from 'components/HeadingSection'
 import HeadingSubtitle from 'components/HeadingSubtitle'
-import MediaMatch from 'components/MediaMatch'
 import CardIconLeft from 'components/CardIconLeft'
+import HideInMedia from 'components/HideInMedia'
 
 type SecServicesProps = {
   servicesTitle: string
@@ -123,7 +123,7 @@ const SecServices = ({
             </li>
           </S.Itens>
 
-          <MediaMatch greaterThan="large">
+          <HideInMedia size="large">
             <S.Photo>
               <ul className="mask">
                 <li className={`item ${itemOne ? 'active' : ''}`}>
@@ -180,7 +180,7 @@ const SecServices = ({
               <div className="circle"></div>
               <div className="circle"></div>
             </S.Photo>
-          </MediaMatch>
+          </HideInMedia>
         </S.Content>
       </TheContainer>
     </S.Wrapper>

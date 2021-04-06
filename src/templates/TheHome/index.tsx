@@ -6,6 +6,7 @@ import SecAbout from 'sections/SecAbout'
 import SecClients from 'sections/SecClients'
 import SecContact from 'sections/SecContact'
 import VideoBgMask from 'components/VideoBgMask'
+import HideInMedia from 'components/HideInMedia'
 
 export type TheHomeProps = {
   // intro
@@ -93,7 +94,9 @@ const TheHome = ({
     </section>
 
     <section className="section">
-      <VideoBgMask />
+      <HideInMedia size="large">
+        <VideoBgMask />
+      </HideInMedia>
     </section>
 
     <section className="section" id="nextSec">
