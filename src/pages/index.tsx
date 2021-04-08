@@ -1,3 +1,5 @@
+import Head from 'next/head'
+
 import TheHeader from 'templates/TheHeader'
 import TheHome, { TheHomeProps } from 'templates/TheHome'
 import TheFooter from 'templates/TheFooter'
@@ -42,6 +44,13 @@ export default function Home({
 }: TheHomeProps) {
   return (
     <>
+      <Head>
+        <title>2TD - Bem-vindo a 2TD</title>
+        <meta
+          name="description"
+          content="A melhor equipe da América Latina. A 2TD é expert em investigar, identificar alertas, monitorar, descobrir, analisar e entender o problema para propor soluções."
+        />
+      </Head>
       <TheHeader color="primary" />
       <TheHome
         introPretitle={introPretitle}

@@ -1,3 +1,5 @@
+import Head from 'next/head'
+
 import TheHeader from 'templates/TheHeader'
 import TheFooter from 'templates/TheFooter'
 import ThePage from 'templates/ThePage'
@@ -61,6 +63,13 @@ export default function PageSobre({
 }: PageSobreProps) {
   return (
     <>
+      <Head>
+        <title>2TD - Sobre a 2TD</title>
+        <meta
+          name="description"
+          content="A 2TD é expert em investigar, identificar alertas, monitorar, descobrir, analisar e entender o problema para propor soluções."
+        />
+      </Head>
       <TheHeader color="secondary" />
       <ThePage
         title={titleIntro}
