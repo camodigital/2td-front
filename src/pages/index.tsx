@@ -45,10 +45,10 @@ export default function Home({
   return (
     <>
       <Head>
-        <title>2TD - Bem-vindo a 2TD</title>
+        <title>2TD | Bem-vindo a 2TD, a melhor equipe da América Latina</title>
         <meta
           name="description"
-          content="A melhor equipe da América Latina. A 2TD é expert em investigar, identificar alertas, monitorar, descobrir, analisar e entender o problema para propor soluções."
+          content="A 2TD é expert em investigar, identificar alertas, monitorar, descobrir, analisar e entender o problema para propor soluções."
         />
       </Head>
       <TheHeader color="primary" />

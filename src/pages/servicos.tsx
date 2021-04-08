@@ -64,7 +64,7 @@ export default function PageServicos({
   return (
     <>
       <Head>
-        <title>2TD - Nossos Serviços</title>
+        <title>2TD | Nossos Serviços, a melhor equipe da América Latina</title>
         <meta
           name="description"
           content="Conheça nossos serviços. Observality, cloud, machine learning."

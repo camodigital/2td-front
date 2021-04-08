@@ -64,7 +64,7 @@ export default function PageSobre({
   return (
     <>
       <Head>
-        <title>2TD - Sobre a 2TD</title>
+        <title>2TD | Sobre nós, a melhor equipe da América Latina</title>
         <meta
           name="description"
           content="A 2TD é expert em investigar, identificar alertas, monitorar, descobrir, analisar e entender o problema para propor soluções."
