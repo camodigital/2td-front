@@ -1,4 +1,4 @@
-Sitemap: https://2td.vercel.app/api/posts-sitemap
+Sitemap: https://2td.vercel.app/sitemap
 
 User-agent: *
 Allow: /*
